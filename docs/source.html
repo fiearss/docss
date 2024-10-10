@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href>
+  <title data-ice="title">Source</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api-v2">api_v2</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API">API</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-checkbox-manager">components/checkbox-manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant">components/diagram-gant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-diagramgantconcretical">components/diagram-gant/diagramGantConcretical</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-switch-diagram-rss">components/diagram-gant/switch-diagram-rss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-interval">components/interval</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-loader">components/loader</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-modal">components/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-panel-standart">components/panel/standart</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-state">components/state</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables">components/tables</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-activesessiontable">components/tables/ActiveSessionTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-zanrsstable">components/tables/ZanRssTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-channelplantable">components/tables/channelPlanTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-hpptable">components/tables/hppTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-timer">components/timer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-animations">modules/animations</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animate">animate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-checkboxmanager">modules/checkboxManager</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-diagrams">modules/diagrams</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-infoblocks">modules/infoBlocks</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-map">modules/map</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-map">map</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-overlay">overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-modals">modules/modals</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-monitoring">modules/monitoring</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-interval">interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-pages">modules/pages</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pages">pages</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-savescreen">modules/saveScreen</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-state">modules/state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MAP">MAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-USER">USER</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-tables">modules/tables</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-user">modules/user</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logout">logout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-combo-box">ui/combo-box</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-dropdown">ui/dropdown</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-time-input">ui/time-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-toggle">ui/toggle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delay">delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">289/631</span></h1>
+
+<table class="files-summary" data-ice="files" data-use-coverage="true">
+  <thead>
+    <tr>
+      <td>File</td>
+      <td>Identifier</td>
+      <td class="coverage">Document</td>
+      <td style="display: none;">Size</td>
+      <td style="display: none;">Lines</td>
+      <td style="display: none;">Updated</td>
+    </tr>
+  </thead>
+  <tbody>
+    
+  <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api/authApi.js.html">ka/api/authApi.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">8/8</span></td>
+      <td style="display: none;" data-ice="size">3441 byte</td>
+      <td style="display: none;" data-ice="lines">102</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api/kaApi.js.html#errorLines=12,13,14,17,20,25,36">ka/api/kaApi.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></td>
+      <td class="coverage"><span data-ice="coverage">61 %</span><span data-ice="coverageCount" class="coverage-count">11/18</span></td>
+      <td style="display: none;" data-ice="size">16823 byte</td>
+      <td style="display: none;" data-ice="lines">289</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api/reportApi.js.html#errorLines=12,8,9">ka/api/reportApi.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></td>
+      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">6/9</span></td>
+      <td style="display: none;" data-ice="size">5012 byte</td>
+      <td style="display: none;" data-ice="lines">92</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api_v2/_SomeBaseAPI.js.html#errorLines=10,11,9">ka/api_v2/_SomeBaseAPI.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/3</span></td>
+      <td style="display: none;" data-ice="size">492 byte</td>
+      <td style="display: none;" data-ice="lines">13</td>
+      <td style="display: none;" data-ice="updated">2024-08-04 16:57:00 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api_v2/index.js.html#errorLines=11,25,9">ka/api_v2/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-API">API</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/3</span></td>
+      <td style="display: none;" data-ice="size">1217 byte</td>
+      <td style="display: none;" data-ice="lines">33</td>
+      <td style="display: none;" data-ice="updated">2024-10-03 14:18:56 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api_v2/kaApi.js.html#errorLines=100,108,17,24,3,34,38,4,42,59,66,70,74,8,92">ka/api_v2/kaApi.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></td>
+      <td class="coverage"><span data-ice="coverage">6 %</span><span data-ice="coverageCount" class="coverage-count">1/16</span></td>
+      <td style="display: none;" data-ice="size">3843 byte</td>
+      <td style="display: none;" data-ice="lines">114</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:37:18 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api_v2/kaApiPrew.js.html#errorLines=24,3,4,8">ka/api_v2/kaApiPrew.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/4</span></td>
+      <td style="display: none;" data-ice="size">1007 byte</td>
+      <td style="display: none;" data-ice="lines">29</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 19:12:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/api_v2/reportApi.js.html#errorLines=12,3,4,8">ka/api_v2/reportApi.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/4</span></td>
+      <td style="display: none;" data-ice="size">526 byte</td>
+      <td style="display: none;" data-ice="lines">14</td>
+      <td style="display: none;" data-ice="updated">2024-08-06 22:05:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/checkbox-manager/CheckboxManager.js.html">ka/components/checkbox-manager/CheckboxManager.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">5/5</span></td>
+      <td style="display: none;" data-ice="size">1497 byte</td>
+      <td style="display: none;" data-ice="lines">41</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/TimelineGant.js.html#errorLines=14,17,20,21,24,26,6,74">ka/components/diagram-gant/TimelineGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></td>
+      <td class="coverage"><span data-ice="coverage">52 %</span><span data-ice="coverageCount" class="coverage-count">9/17</span></td>
+      <td style="display: none;" data-ice="size">5980 byte</td>
+      <td style="display: none;" data-ice="lines">138</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/diagramGant.js.html#errorLines=23,25,26,28,30,32,522">ka/components/diagram-gant/diagramGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span>
+<span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span>
+<span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span>
+<span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></td>
+      <td class="coverage"><span data-ice="coverage">75 %</span><span data-ice="coverageCount" class="coverage-count">22/29</span></td>
+      <td style="display: none;" data-ice="size">32491 byte</td>
+      <td style="display: none;" data-ice="lines">621</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js.html#errorLines=11">ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></td>
+      <td class="coverage"><span data-ice="coverage">50 %</span><span data-ice="coverageCount" class="coverage-count">1/2</span></td>
+      <td style="display: none;" data-ice="size">3423 byte</td>
+      <td style="display: none;" data-ice="lines">83</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js.html">ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">4/4</span></td>
+      <td style="display: none;" data-ice="size">13010 byte</td>
+      <td style="display: none;" data-ice="lines">240</td>
+      <td style="display: none;" data-ice="updated">2024-08-06 10:06:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js.html">ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">4/4</span></td>
+      <td style="display: none;" data-ice="size">7589 byte</td>
+      <td style="display: none;" data-ice="lines">154</td>
+      <td style="display: none;" data-ice="updated">2024-08-06 10:06:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js.html">ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">4650 byte</td>
+      <td style="display: none;" data-ice="lines">79</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js.html#errorLines=18,2,26,38,4,42,5">ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/7</span></td>
+      <td style="display: none;" data-ice="size">1472 byte</td>
+      <td style="display: none;" data-ice="lines">44</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/interval/Interval.js.html#errorLines=1,9">ka/components/interval/Interval.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></td>
+      <td class="coverage"><span data-ice="coverage">85 %</span><span data-ice="coverageCount" class="coverage-count">12/14</span></td>
+      <td style="display: none;" data-ice="size">5188 byte</td>
+      <td style="display: none;" data-ice="lines">123</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/loader/Loader.js.html#errorLines=16,28,68,9">ka/components/loader/Loader.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></td>
+      <td class="coverage"><span data-ice="coverage">60 %</span><span data-ice="coverageCount" class="coverage-count">6/10</span></td>
+      <td style="display: none;" data-ice="size">2908 byte</td>
+      <td style="display: none;" data-ice="lines">70</td>
+      <td style="display: none;" data-ice="updated">2024-08-04 11:02:09 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/loader/LoadingManager.js.html#errorLines=1,79">ka/components/loader/LoadingManager.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></td>
+      <td class="coverage"><span data-ice="coverage">83 %</span><span data-ice="coverageCount" class="coverage-count">10/12</span></td>
+      <td style="display: none;" data-ice="size">3721 byte</td>
+      <td style="display: none;" data-ice="lines">105</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 19:46:30 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/modal/ModalNotification.js.html#errorLines=1">ka/components/modal/ModalNotification.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></td>
+      <td class="coverage"><span data-ice="coverage">94 %</span><span data-ice="coverageCount" class="coverage-count">16/17</span></td>
+      <td style="display: none;" data-ice="size">6269 byte</td>
+      <td style="display: none;" data-ice="lines">152</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/panel/standart/control.js.html#errorLines=10,12,13,16,3,50,56,79,8,9">ka/components/panel/standart/control.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></td>
+      <td class="coverage"><span data-ice="coverage">16 %</span><span data-ice="coverageCount" class="coverage-count">2/12</span></td>
+      <td style="display: none;" data-ice="size">3309 byte</td>
+      <td style="display: none;" data-ice="lines">81</td>
+      <td style="display: none;" data-ice="updated">2024-08-07 02:41:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/state/State.js.html">ka/components/state/State.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">8/8</span></td>
+      <td style="display: none;" data-ice="size">3274 byte</td>
+      <td style="display: none;" data-ice="lines">70</td>
+      <td style="display: none;" data-ice="updated">2024-08-04 15:19:37 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js.html#errorLines=10,11,12,158,17,197,21,28,40,50,62,7,9,99">ka/components/tables/ActiveSessionTable/ActiveSessionTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/14</span></td>
+      <td style="display: none;" data-ice="size">9463 byte</td>
+      <td style="display: none;" data-ice="lines">221</td>
+      <td style="display: none;" data-ice="updated">2024-08-04 17:23:42 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/ModalInfo.js.html#errorLines=14,37,59">ka/components/tables/ActiveSessionTable/ModalInfo.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></td>
+      <td class="coverage"><span data-ice="coverage">62 %</span><span data-ice="coverageCount" class="coverage-count">5/8</span></td>
+      <td style="display: none;" data-ice="size">2424 byte</td>
+      <td style="display: none;" data-ice="lines">72</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/Table.js.html#errorLines=10,13,17,22,4,5,6,7,8,9">ka/components/tables/ActiveSessionTable/Table.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/10</span></td>
+      <td style="display: none;" data-ice="size">1002 byte</td>
+      <td style="display: none;" data-ice="lines">36</td>
+      <td style="display: none;" data-ice="updated">2024-08-07 03:20:27 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/_control.js.html#errorLines=10,12,17,25,3,34,35,37,38,41,46,52,77">ka/components/tables/ActiveSessionTable/_control.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></td>
+      <td class="coverage"><span data-ice="coverage">13 %</span><span data-ice="coverageCount" class="coverage-count">2/15</span></td>
+      <td style="display: none;" data-ice="size">3356 byte</td>
+      <td style="display: none;" data-ice="lines">79</td>
+      <td style="display: none;" data-ice="updated">2024-08-07 02:36:02 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/control.js.html#errorLines=10,12,13,16,3,50,56,79,8,9">ka/components/tables/ActiveSessionTable/control.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></td>
+      <td class="coverage"><span data-ice="coverage">16 %</span><span data-ice="coverageCount" class="coverage-count">2/12</span></td>
+      <td style="display: none;" data-ice="size">3309 byte</td>
+      <td style="display: none;" data-ice="lines">81</td>
+      <td style="display: none;" data-ice="updated">2024-08-07 02:41:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ActiveSessionTable/index.js.html#errorLines=4">ka/components/tables/ActiveSessionTable/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
+      <td style="display: none;" data-ice="size">219 byte</td>
+      <td style="display: none;" data-ice="lines">9</td>
+      <td style="display: none;" data-ice="updated">2024-08-03 18:05:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/CallersIntervalsTable.js.html#errorLines=34,47,48,49,5,50,51">ka/components/tables/CallersIntervalsTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">63 %</span><span data-ice="coverageCount" class="coverage-count">12/19</span></td>
+      <td style="display: none;" data-ice="size">13845 byte</td>
+      <td style="display: none;" data-ice="lines">281</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/RssIntervalsTable.js.html#errorLines=26">ka/components/tables/RssIntervalsTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">83 %</span><span data-ice="coverageCount" class="coverage-count">5/6</span></td>
+      <td style="display: none;" data-ice="size">8127 byte</td>
+      <td style="display: none;" data-ice="lines">149</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/RssKallisionTable.js.html#errorLines=27,28,31">ka/components/tables/RssKallisionTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">57 %</span><span data-ice="coverageCount" class="coverage-count">4/7</span></td>
+      <td style="display: none;" data-ice="size">6710 byte</td>
+      <td style="display: none;" data-ice="lines">129</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:19:39 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/RssNewIntervalsTable.js.html#errorLines=27,28,31">ka/components/tables/RssNewIntervalsTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">57 %</span><span data-ice="coverageCount" class="coverage-count">4/7</span></td>
+      <td style="display: none;" data-ice="size">6676 byte</td>
+      <td style="display: none;" data-ice="lines">129</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:17:47 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/ZanRssTable/ControlZanRssTable.js.html#errorLines=3,33,34,35,36,38,4,41,5,58,6,66,70">ka/components/tables/ZanRssTable/ControlZanRssTable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/13</span></td>
+      <td style="display: none;" data-ice="size">3080 byte</td>
+      <td style="display: none;" data-ice="lines">79</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 21:37:56 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/channelPlanTable/ModalChannelPlan.js.html#errorLines=14,37">ka/components/tables/channelPlanTable/ModalChannelPlan.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></td>
+      <td class="coverage"><span data-ice="coverage">71 %</span><span data-ice="coverageCount" class="coverage-count">5/7</span></td>
+      <td style="display: none;" data-ice="size">2254 byte</td>
+      <td style="display: none;" data-ice="lines">66</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/channelPlanTable/controlPanel.js.html#errorLines=17,19,24,34,43,45,46,55,58,99">ka/components/tables/channelPlanTable/controlPanel.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></td>
+      <td class="coverage"><span data-ice="coverage">28 %</span><span data-ice="coverageCount" class="coverage-count">4/14</span></td>
+      <td style="display: none;" data-ice="size">4988 byte</td>
+      <td style="display: none;" data-ice="lines">102</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/hppTable/ModalChannelPlan.js.html#errorLines=14,37">ka/components/tables/hppTable/ModalChannelPlan.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></td>
+      <td class="coverage"><span data-ice="coverage">71 %</span><span data-ice="coverageCount" class="coverage-count">5/7</span></td>
+      <td style="display: none;" data-ice="size">2254 byte</td>
+      <td style="display: none;" data-ice="lines">66</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/hppTable/controlPanel.js.html#errorLines=17,19,24,34,43,45,46,55,58,99">ka/components/tables/hppTable/controlPanel.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></td>
+      <td class="coverage"><span data-ice="coverage">28 %</span><span data-ice="coverageCount" class="coverage-count">4/14</span></td>
+      <td style="display: none;" data-ice="size">4988 byte</td>
+      <td style="display: none;" data-ice="lines">102</td>
+      <td style="display: none;" data-ice="updated">2024-08-06 16:53:54 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/tables/hppTable/index.js.html#errorLines=5">ka/components/tables/hppTable/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
+      <td style="display: none;" data-ice="size">287 byte</td>
+      <td style="display: none;" data-ice="lines">10</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/timer/Timer.js.html#errorLines=13,15,17,19">ka/components/timer/Timer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">42 %</span><span data-ice="coverageCount" class="coverage-count">3/7</span></td>
+      <td style="display: none;" data-ice="size">1606 byte</td>
+      <td style="display: none;" data-ice="lines">34</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/components/timer/TimerManagment.js.html#errorLines=11,3,4,5,7,9">ka/components/timer/TimerManagment.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></td>
+      <td class="coverage"><span data-ice="coverage">25 %</span><span data-ice="coverageCount" class="coverage-count">2/8</span></td>
+      <td style="display: none;" data-ice="size">2006 byte</td>
+      <td style="display: none;" data-ice="lines">44</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 06:19:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/index.js.html#errorLines=103,109,118,27,47,48,54,63,73,81,89,96">ka/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/12</span></td>
+      <td style="display: none;" data-ice="size">8339 byte</td>
+      <td style="display: none;" data-ice="lines">120</td>
+      <td style="display: none;" data-ice="updated">2024-10-03 14:41:07 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/animations/animations.js.html#errorLines=11,13,14,9">ka/modules/animations/animations.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-animate">animate</a></span></td>
+      <td class="coverage"><span data-ice="coverage">33 %</span><span data-ice="coverageCount" class="coverage-count">2/6</span></td>
+      <td style="display: none;" data-ice="size">4696 byte</td>
+      <td style="display: none;" data-ice="lines">79</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/checkboxManager/checkboxManager.js.html#errorLines=14">ka/modules/checkboxManager/checkboxManager.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span>
+<span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></td>
+      <td class="coverage"><span data-ice="coverage">50 %</span><span data-ice="coverageCount" class="coverage-count">1/2</span></td>
+      <td style="display: none;" data-ice="size">724 byte</td>
+      <td style="display: none;" data-ice="lines">16</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/diagrams/diagrams.js.html#errorLines=13,15,17,175,19,21,23,25,27,29,31,310,33,34,37,424,544,547">ka/modules/diagrams/diagrams.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span>
+<span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span>
+<span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span>
+<span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span>
+<span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span>
+<span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span>
+<span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span>
+<span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span>
+<span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span>
+<span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span>
+<span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span>
+<span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span>
+<span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span>
+<span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span>
+<span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/18</span></td>
+      <td style="display: none;" data-ice="size">25565 byte</td>
+      <td style="display: none;" data-ice="lines">601</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:06:15 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/infoBlocks/infoBlocks.js.html#errorLines=17,21">ka/modules/infoBlocks/infoBlocks.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span>
+<span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span>
+<span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></td>
+      <td class="coverage"><span data-ice="coverage">33 %</span><span data-ice="coverageCount" class="coverage-count">1/3</span></td>
+      <td style="display: none;" data-ice="size">1772 byte</td>
+      <td style="display: none;" data-ice="lines">24</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 21:25:15 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/map/map.js.html#errorLines=121,155,162,165,29,5,66,90">ka/modules/map/map.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span>
+<span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span>
+<span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span>
+<span><a href="variable/index.html#static-variable-map">map</a></span>
+<span><a href="variable/index.html#static-variable-overlay">overlay</a></span>
+<span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/8</span></td>
+      <td style="display: none;" data-ice="size">7890 byte</td>
+      <td style="display: none;" data-ice="lines">192</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 18:22:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/modals/modals.js.html#errorLines=100,102,104,106,108,109,110,113,114,133,134,22,24,26,29,31,33,35,37,40,42,44,48,50,52,54,56,58,61,63,64,65,68,69,77,79,81,83,85,87,89,91,93,95,97">ka/modules/modals/modals.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span>
+<span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span>
+<span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span>
+<span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span>
+<span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span>
+<span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span>
+<span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span>
+<span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span>
+<span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span>
+<span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span>
+<span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span>
+<span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span>
+<span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span>
+<span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span>
+<span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span>
+<span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span>
+<span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span>
+<span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span>
+<span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span>
+<span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span>
+<span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span>
+<span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span>
+<span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></td>
+      <td class="coverage"><span data-ice="coverage">4 %</span><span data-ice="coverageCount" class="coverage-count">2/47</span></td>
+      <td style="display: none;" data-ice="size">22269 byte</td>
+      <td style="display: none;" data-ice="lines">421</td>
+      <td style="display: none;" data-ice="updated">2024-10-03 14:37:28 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/monitoring/monitoring.js.html">ka/modules/monitoring/monitoring.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-interval">interval</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">2939 byte</td>
+      <td style="display: none;" data-ice="lines">85</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/pages/pages.js.html">ka/modules/pages/pages.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-pages">pages</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">5076 byte</td>
+      <td style="display: none;" data-ice="lines">154</td>
+      <td style="display: none;" data-ice="updated">2024-10-03 14:34:06 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/saveScreen/saveScreen.js.html">ka/modules/saveScreen/saveScreen.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">1/1</span></td>
+      <td style="display: none;" data-ice="size">5741 byte</td>
+      <td style="display: none;" data-ice="lines">118</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:03:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/state/handlerState.js.html#errorLines=14,153,155,16,18,22,24,27,29,32">ka/modules/state/handlerState.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></td>
+      <td class="coverage"><span data-ice="coverage">28 %</span><span data-ice="coverageCount" class="coverage-count">4/14</span></td>
+      <td style="display: none;" data-ice="size">8165 byte</td>
+      <td style="display: none;" data-ice="lines">162</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/state/state.js.html#errorLines=26,51,62,72">ka/modules/state/state.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span>
+<span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span>
+<span><a href="variable/index.html#static-variable-MAP">MAP</a></span>
+<span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span>
+<span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span>
+<span><a href="variable/index.html#static-variable-USER">USER</a></span></td>
+      <td class="coverage"><span data-ice="coverage">33 %</span><span data-ice="coverageCount" class="coverage-count">2/6</span></td>
+      <td style="display: none;" data-ice="size">2361 byte</td>
+      <td style="display: none;" data-ice="lines">74</td>
+      <td style="display: none;" data-ice="updated">2024-08-04 14:42:31 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/tables/tables.js.html#errorLines=32,341,345,347,349,353,355,358,359,362,363,366,369,371,373,376,387,389,391,407,418,425,466,468,469,478,485,488,489,497,499,507,509">ka/modules/tables/tables.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span>
+<span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span>
+<span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span>
+<span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span>
+<span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span>
+<span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span>
+<span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span>
+<span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span>
+<span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span>
+<span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span>
+<span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span>
+<span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span>
+<span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span>
+<span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span>
+<span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span>
+<span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span>
+<span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span>
+<span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span>
+<span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span>
+<span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span>
+<span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span>
+<span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span>
+<span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span>
+<span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span>
+<span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span>
+<span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span>
+<span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span>
+<span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span>
+<span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></td>
+      <td class="coverage"><span data-ice="coverage">13 %</span><span data-ice="coverageCount" class="coverage-count">5/38</span></td>
+      <td style="display: none;" data-ice="size">21205 byte</td>
+      <td style="display: none;" data-ice="lines">514</td>
+      <td style="display: none;" data-ice="updated">2024-10-04 11:36:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/modules/user/user.js.html#errorLines=54">ka/modules/user/user.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span>
+<span><a href="function/index.html#static-function-logout">logout</a></span>
+<span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></td>
+      <td class="coverage"><span data-ice="coverage">85 %</span><span data-ice="coverageCount" class="coverage-count">6/7</span></td>
+      <td style="display: none;" data-ice="size">4265 byte</td>
+      <td style="display: none;" data-ice="lines">113</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/ui/combo-box/ComboBox.js.html#errorLines=1">ka/ui/combo-box/ComboBox.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></td>
+      <td class="coverage"><span data-ice="coverage">90 %</span><span data-ice="coverageCount" class="coverage-count">10/11</span></td>
+      <td style="display: none;" data-ice="size">4887 byte</td>
+      <td style="display: none;" data-ice="lines">120</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/ui/dropdown/Dropdown.js.html#errorLines=15,24,33">ka/ui/dropdown/Dropdown.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></td>
+      <td class="coverage"><span data-ice="coverage">81 %</span><span data-ice="coverageCount" class="coverage-count">13/16</span></td>
+      <td style="display: none;" data-ice="size">6355 byte</td>
+      <td style="display: none;" data-ice="lines">141</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/ui/time-input/TimeInput.js.html#errorLines=1,7">ka/ui/time-input/TimeInput.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></td>
+      <td class="coverage"><span data-ice="coverage">60 %</span><span data-ice="coverageCount" class="coverage-count">3/5</span></td>
+      <td style="display: none;" data-ice="size">4678 byte</td>
+      <td style="display: none;" data-ice="lines">109</td>
+      <td style="display: none;" data-ice="updated">2024-08-07 01:53:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/ui/toggle/toggle.js.html#errorLines=17,21,30">ka/ui/toggle/toggle.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></td>
+      <td class="coverage"><span data-ice="coverage">62 %</span><span data-ice="coverageCount" class="coverage-count">5/8</span></td>
+      <td style="display: none;" data-ice="size">2218 byte</td>
+      <td style="display: none;" data-ice="lines">64</td>
+      <td style="display: none;" data-ice="updated">2024-08-06 16:01:22 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/utils/animateUtils.js.html#errorLines=2">ka/utils/animateUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></td>
+      <td class="coverage"><span data-ice="coverage">96 %</span><span data-ice="coverageCount" class="coverage-count">27/28</span></td>
+      <td style="display: none;" data-ice="size">13657 byte</td>
+      <td style="display: none;" data-ice="lines">323</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/utils/dateUtils.js.html">ka/utils/dateUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">12/12</span></td>
+      <td style="display: none;" data-ice="size">10466 byte</td>
+      <td style="display: none;" data-ice="lines">237</td>
+      <td style="display: none;" data-ice="updated">2024-09-02 23:38:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/utils/fetchUtils.js.html">ka/utils/fetchUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span>
+<span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span>
+<span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">3/3</span></td>
+      <td style="display: none;" data-ice="size">6761 byte</td>
+      <td style="display: none;" data-ice="lines">111</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/utils/screenUtils.js.html">ka/utils/screenUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-delay">delay</a></span>
+<span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span>
+<span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">3/3</span></td>
+      <td style="display: none;" data-ice="size">3329 byte</td>
+      <td style="display: none;" data-ice="lines">50</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/ka/utils/tableUtils.js.html">ka/utils/tableUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span>
+<span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></td>
+      <td class="coverage"><span data-ice="coverage">100 %</span><span data-ice="coverageCount" class="coverage-count">2/2</span></td>
+      <td style="display: none;" data-ice="size">2739 byte</td>
+      <td style="display: none;" data-ice="lines">42</td>
+      <td style="display: none;" data-ice="updated">2024-08-02 05:50:40 (UTC)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

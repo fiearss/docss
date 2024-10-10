@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">ka/utils/dateUtils.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api-v2">api_v2</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API">API</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-checkbox-manager">components/checkbox-manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant">components/diagram-gant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-diagramgantconcretical">components/diagram-gant/diagramGantConcretical</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-switch-diagram-rss">components/diagram-gant/switch-diagram-rss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-interval">components/interval</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-loader">components/loader</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-modal">components/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-panel-standart">components/panel/standart</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-state">components/state</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables">components/tables</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-activesessiontable">components/tables/ActiveSessionTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-zanrsstable">components/tables/ZanRssTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-channelplantable">components/tables/channelPlanTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-hpptable">components/tables/hppTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-timer">components/timer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-animations">modules/animations</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animate">animate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-checkboxmanager">modules/checkboxManager</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-diagrams">modules/diagrams</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-infoblocks">modules/infoBlocks</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-map">modules/map</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-map">map</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-overlay">overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-modals">modules/modals</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-monitoring">modules/monitoring</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-interval">interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-pages">modules/pages</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pages">pages</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-savescreen">modules/saveScreen</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-state">modules/state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MAP">MAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-USER">USER</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-tables">modules/tables</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-user">modules/user</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logout">logout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-combo-box">ui/combo-box</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-dropdown">ui/dropdown</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-time-input">ui/time-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-toggle">ui/toggle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delay">delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">ka/utils/dateUtils.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * &#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; `dateUtils` &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x443;&#x442;&#x438;&#x43B;&#x438;&#x442;&#x44B; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x441; &#x434;&#x430;&#x442;&#x430;&#x43C;&#x438;.
+ *
+ * @module dateUtils
+ * @exports padTo2Digits
+ * @exports setInputDate
+ * @exports setInputTime
+ * @exports getDateFromInputs
+ * @exports formatDisplayDate
+ * @exports formatDisplayTime
+ */
+
+/**
+ * &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x442; &#x447;&#x438;&#x441;&#x43B;&#x43E;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x443; &#x43D;&#x435;&#x433;&#x43E; &#x431;&#x44B;&#x43B;&#x43E; &#x43D;&#x435; &#x43C;&#x435;&#x43D;&#x435;&#x435; 2 &#x437;&#x43D;&#x430;&#x43A;&#x430;.
+ *
+ * @param {number} num - &#x427;&#x438;&#x441;&#x43B;&#x43E;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43E;.
+ * @return {string} - &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x43E; &#x432; &#x432;&#x438;&#x434;&#x435; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+ */
+const padTo2Digits = (num) =&gt; {
+    return num.toString().padStart(2, &apos;0&apos;);
+}
+
+/**
+ * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;date&apos; &#x438;&#x437; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; JavaScript Date.
+ *
+ * @param {HTMLInputElement} dateInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;date&apos;.
+ * @param {Date} date - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; JavaScript Date.
+ * @return {void}
+ */
+const setInputDate = (dateInput, date) =&gt; {
+    dateInput.value = [date.getFullYear(), padTo2Digits(date.getMonth() + 1), padTo2Digits(date.getDate()),].join(&apos;-&apos;)
+}
+
+/**
+ * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;time&apos; &#x438;&#x437; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; JavaScript Date.
+ *
+ * @param {HTMLInputElement} timeInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;time&apos;.
+ * @param {Date} date - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; JavaScript Date.
+ * @return {void}
+ */
+const setInputTime = (timeInput, date) =&gt; {
+    // &#x418;&#x437;&#x432;&#x43B;&#x435;&#x43A;&#x430;&#x435;&#x43C; &#x447;&#x430;&#x441;&#x44B;, &#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B; &#x438; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B; &#x438;&#x437; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; &#x434;&#x430;&#x442;&#x44B; &#x438; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x438;&#x445; &#x43A;&#x430;&#x43A; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x432;&#x435;&#x434;&#x443;&#x449;&#x438;&#x43C;&#x438; &#x43D;&#x443;&#x43B;&#x44F;&#x43C;&#x438;, &#x435;&#x441;&#x43B;&#x438; &#x44D;&#x442;&#x43E; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;.
+    // &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, 1:2:3 &#x43F;&#x440;&#x435;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x432; 01:02:03.
+    timeInput.value = [
+        padTo2Digits(date.getHours()),
+        padTo2Digits(date.getMinutes()),
+        padTo2Digits(date.getSeconds()),
+    ].join(&apos;:&apos;);
+}
+
+
+/**
+ * &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; Date, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x438;&#x437; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x434;&#x430;&#x442;&#x44B; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;.
+ *
+ * @param {HTMLInputElement} dateInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;date&apos;.
+ * @param {HTMLInputElement} timeInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x438;&#x43F;&#x430; &apos;time&apos;.
+ * @return {Date} &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; Date, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x438;&#x437; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x432;&#x432;&#x43E;&#x434;&#x430; &#x434;&#x430;&#x442;&#x44B; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;.
+ */
+const getDateFromInputs = (dateInput, timeInput) =&gt; {
+    // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;yyyy-mm-ddThh:mm:ss&apos;, &#x438; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; Date &#x438;&#x437; &#x43D;&#x435;&#x435;.
+    // &#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440;: 2020-06-20T15:30:45
+    return new Date(dateInput.value + &apos;T&apos; + timeInput.value);
+}
+
+
+/**
+ * &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x443;&#x44E; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;dd.mm.yyyy&apos;.
+ * 
+ * @param {Date} date - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; JavaScript Date.
+ * @return {string} &#x421;&#x442;&#x440;&#x43E;&#x43A;&#x430;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x430;&#x44F; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443;.
+ */
+const formatDisplayDate = (date) =&gt; {
+    // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x441; &#x43E;&#x43F;&#x446;&#x438;&#x44F;&#x43C;&#x438; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x434;&#x430;&#x442;&#x44B;.
+    // &apos;day&apos;: &apos;2-digit&apos; - &#x434;&#x43D;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;,
+    // &apos;month&apos;: &apos;2-digit&apos; - &#x43C;&#x435;&#x441;&#x44F;&#x446;&#x44B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;,
+    // &apos;year&apos;: &apos;numeric&apos; - &#x433;&#x43E;&#x434; &#x432; &#x447;&#x438;&#x441;&#x43B;&#x43E;&#x432;&#x43E;&#x43C; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435;.
+    const options = {
+        day: &apos;2-digit&apos;,
+        month: &apos;2-digit&apos;,
+        year: &apos;numeric&apos;
+    };
+
+    // &#x41F;&#x440;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x443;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; Date &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x43E;&#x43F;&#x446;&#x438;&#x439; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;.
+    // &#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x43E;&#x431;&#x43E;&#x439; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;dd.mm.yyyy&apos;.
+    return date.toLocaleDateString([], options);
+}
+
+
+/**
+ * &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x443;&#x44E; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;hh:mm:ss&apos;.
+ *
+ * @param {Date} date - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; JavaScript Date.
+ * @return {string} &#x421;&#x442;&#x440;&#x43E;&#x43A;&#x430;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x430;&#x44F; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F;.
+ */
+const formatDisplayTime = (date) =&gt; {
+    // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x441; &#x43E;&#x43F;&#x446;&#x438;&#x44F;&#x43C;&#x438; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;.
+    // &apos;hour&apos;: &apos;2-digit&apos; - &#x447;&#x430;&#x441;&#x44B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;,
+    // &apos;minute&apos;: &apos;2-digit&apos; - &#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;,
+    // &apos;second&apos;: &apos;2-digit&apos; - &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;.
+    const options = {
+        hour: &apos;2-digit&apos;,
+        minute: &apos;2-digit&apos;,
+        second: &apos;2-digit&apos;
+    };
+
+    // &#x41F;&#x440;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x443;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; Date &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x43E;&#x43F;&#x446;&#x438;&#x439; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;.
+    // &#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x43E;&#x431;&#x43E;&#x439; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;hh:mm:ss&apos;.
+    return date.toLocaleTimeString([], options);
+}
+
+/**
+ * &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x443;&#x44E; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &apos;dd.mm.yyyy, hh:mm:ss&apos;.
+ *
+ * @param {Date} date - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; JavaScript Date.
+ * @param {string} prefix - &#x420;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x434;&#x430;&#x442;&#x43E;&#x439; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;.
+ * @return {string} &#x421;&#x442;&#x440;&#x43E;&#x43A;&#x430;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x430;&#x44F; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F;.
+ */
+const formatDisplayDateTime = (date, prefix=&apos;, &apos;) =&gt; {
+    // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; formatDisplayDate.
+    const formattedDate = formatDisplayDate(date);
+
+    // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; formatDisplayTime.
+    const formattedTime = formatDisplayTime(date);
+
+    // &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;, &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x430;&#x449;&#x443;&#x44E; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F;, &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x43F;&#x44F;&#x442;&#x43E;&#x439;.
+    return formattedDate + prefix + formattedTime;
+}
+
+/**
+ * &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x43E;&#x431;&#x449;&#x435;&#x435; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; &#x432; &#x442;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x435;, &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43D;&#x43E;&#x43C; &#x432; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x435; input.
+ *
+ * @param {HTMLInputElement} timeInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; input &#x441; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;.
+ * @return {number} &#x41E;&#x431;&#x449;&#x435;&#x435; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; &#x432; &#x442;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x435;.
+ */
+const getInputTotalSeconds = (timeInput) =&gt; {
+    const [hours, minutes, seconds] = timeInput.value.split(&apos;:&apos;).map(Number);
+    return (hours * 3600) + (minutes * 60) + seconds;
+}
+
+/**
+ * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; input &#x442;&#x438;&#x43F;&#x430; &apos;time&apos; &#x438;&#x437; &#x43E;&#x431;&#x449;&#x435;&#x433;&#x43E; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x430; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;.
+ *
+ * @param {HTMLInputElement} timeInput - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; input &#x441; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;.
+ * @param {number} totalSeconds - &#x41E;&#x431;&#x449;&#x435;&#x435; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; &#x432; &#x442;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x435;.
+ */
+const setInputTotalSeconds = (timeInput, totalSeconds) =&gt; {
+    // &#x420;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431;&#x449;&#x435;&#x433;&#x43E; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x430; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; &#x43D;&#x430; &#x447;&#x430;&#x441;&#x44B;, &#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B; &#x438; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B;.
+    const hours = Math.floor(totalSeconds / 3600); // &#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x430; &#x447;&#x430;&#x441;&#x43E;&#x432;.
+    const minutes = Math.floor((totalSeconds - (hours * 3600)) / 60); // &#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x430; &#x43C;&#x438;&#x43D;&#x443;&#x442;.
+    const seconds = totalSeconds - (hours * 3600) - (minutes * 60); // &#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x430; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;.
+
+    // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x435;&#x43B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B; &#x441; &#x432;&#x435;&#x434;&#x443;&#x449;&#x438;&#x43C;&#x438; &#x43D;&#x443;&#x43B;&#x44F;&#x43C;&#x438;.
+    const formattedTime = [hours, minutes, seconds]
+        .map(n =&gt; n.toString().padStart(2, &apos;0&apos;)) // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x430; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; 2 &#x446;&#x438;&#x444;&#x440;&#x44B;.
+        .join(&apos;:&apos;); // &#x41E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x447;&#x438;&#x441;&#x435;&#x43B; &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x434;&#x432;&#x43E;&#x435;&#x442;&#x43E;&#x447;&#x438;&#x44F;.
+
+    // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; input.
+    timeInput.value = formattedTime;
+}
+
+
+
+/**
+ * &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x442; &#x440;&#x430;&#x437;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x432; &#x443;&#x434;&#x43E;&#x431;&#x43E;&#x447;&#x438;&#x442;&#x430;&#x435;&#x43C;&#x44B;&#x439; &#x442;&#x435;&#x43A;&#x441;&#x442;.
+ * 
+ * @param {number} timeDiff - &#x420;&#x430;&#x437;&#x43D;&#x438;&#x446;&#x430; &#x432;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x432; &#x43C;&#x438;&#x43B;&#x43B;&#x438;&#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x430;&#x445;.
+ * @return {string} &#x41E;&#x442;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x442;&#x435;&#x43A;&#x441;&#x442;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x438;&#x439; &#x440;&#x430;&#x437;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;.
+ */
+function formatDisplayTextTimeDifference(timeDiff) {
+    const seconds = Math.floor(timeDiff / 1000);
+
+    if (seconds &lt; 60) {
+        return `&#x43C;&#x435;&#x43D;&#x435;&#x435; &#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B; &#x43D;&#x430;&#x437;&#x430;&#x434;`;
+    }
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const weeks = Math.floor(days / 7);
+
+    if (weeks &gt; 0) {
+        return `${weeks} &#x43D;&#x435;&#x434;&#x435;&#x43B;&#x44C; &#x43D;&#x430;&#x437;&#x430;&#x434;`;
+    } else if (days &gt; 0) {
+        return `${days} &#x434;&#x43D;&#x435;&#x439; &#x43D;&#x430;&#x437;&#x430;&#x434;`;
+    } else if (hours &gt; 0) {
+        return `${hours} &#x447;&#x430;&#x441;&#x43E;&#x432; &#x43D;&#x430;&#x437;&#x430;&#x434;`;
+    } else {
+        return `${minutes} &#x43C;&#x438;&#x43D;&#x443;&#x442; &#x43D;&#x430;&#x437;&#x430;&#x434;`;
+    }
+}
+
+/**
+ * &#x41F;&#x440;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x443;&#x435;&#x442; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442; &#x447;&#x430;&#x441;&#x44B;:&#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B;:&#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B;.
+ *
+ * @param {number} seconds - &#x41A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;.
+ * @return {string} &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x441;&#x442;&#x440;&#x43E;&#x43A; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &#x447;&#x430;&#x441;&#x44B;:&#x43C;&#x438;&#x43D;&#x443;&#x442;&#x44B;:&#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B;.
+ */
+function secondsToHMS(seconds) {
+    const h = String(Math.floor(seconds / 3600)).padStart(2, &apos;0&apos;);
+    const m = String(Math.floor(seconds % 3600 / 60)).padStart(2, &apos;0&apos;);
+    // const s = String(seconds % 60).padStart(2, &apos;0&apos;);
+    const s = String(Math.floor(seconds % 60)).padStart(2, &apos;0&apos;);
+    const ms = (seconds % 1).toFixed(3).substring(2); // &#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x430;&#x435;&#x43C; &#x43C;&#x438;&#x43B;&#x43B;&#x438;&#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x44B; &#x441; 3 &#x437;&#x43D;&#x430;&#x43A;&#x430;&#x43C;&#x438; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x437;&#x430;&#x43F;&#x44F;&#x442;&#x43E;&#x439;
+    return `${h}:${m}:${s}`;
+}
+
+/**
+ * &#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; `dateUtils` &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x443;&#x442;&#x438;&#x43B;&#x438;&#x442;&#x44B; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x441; &#x434;&#x430;&#x442;&#x430;&#x43C;&#x438; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;.
+ * &#x41E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x432; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; (&#x43D;&#x430; &#x43F;&#x43E;&#x434;&#x43E;&#x431;&#x438;&#x438; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430;)
+ *
+ * @module dateUtils
+ * @exports padTo2Digits
+ * @exports setInputDate
+ * @exports setInputTime
+ * @exports getDateFromInputs
+ * @exports formatDisplayDate
+ * @exports formatDisplayTime
+ * @exports formatDisplayDateTime
+ * @exports getInputTotalSeconds
+ * @exports setInputTotalSeconds
+ * @exports formatDisplayTextTimeDifference
+ * @exports secondsToHMS
+ */
+const dateUtils = {
+    padTo2Digits,
+    setInputDate,
+    setInputTime,
+    getDateFromInputs,
+    formatDisplayDate,
+    formatDisplayTime,
+    formatDisplayDateTime,
+    getInputTotalSeconds,
+    setInputTotalSeconds,
+    formatDisplayTextTimeDifference,
+    secondsToHMS
+};
+
+export default dateUtils;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

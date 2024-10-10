@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">ka/modules/diagrams/diagrams.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api-v2">api_v2</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API">API</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-checkbox-manager">components/checkbox-manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant">components/diagram-gant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-diagramgantconcretical">components/diagram-gant/diagramGantConcretical</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-switch-diagram-rss">components/diagram-gant/switch-diagram-rss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-interval">components/interval</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-loader">components/loader</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-modal">components/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-panel-standart">components/panel/standart</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-state">components/state</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables">components/tables</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-activesessiontable">components/tables/ActiveSessionTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-zanrsstable">components/tables/ZanRssTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-channelplantable">components/tables/channelPlanTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-hpptable">components/tables/hppTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-timer">components/timer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-animations">modules/animations</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animate">animate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-checkboxmanager">modules/checkboxManager</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-diagrams">modules/diagrams</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-infoblocks">modules/infoBlocks</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-map">modules/map</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-map">map</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-overlay">overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-modals">modules/modals</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-monitoring">modules/monitoring</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-interval">interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-pages">modules/pages</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pages">pages</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-savescreen">modules/saveScreen</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-state">modules/state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MAP">MAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-USER">USER</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-tables">modules/tables</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-user">modules/user</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logout">logout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-combo-box">ui/combo-box</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-dropdown">ui/dropdown</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-time-input">ui/time-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-toggle">ui/toggle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delay">delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">ka/modules/diagrams/diagrams.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SessionsDiagramGant, GeneralDiagramGant, CallersOverlayGant } from &quot;../../components/diagram-gant/diagramGant.js&quot;;
+import DiagramGantBase from &quot;../../components/diagram-gant/DiagramGantBase.js&quot;;
+import { CallersDiagramGantNEW } from &quot;../../components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js&quot;;
+import { CallersKaRssDiagramGantNEW } from &quot;../../components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js&quot;;
+import { CallersOverlayGantNEW } from &quot;../../components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js&quot;;
+import { blocksToCaptionExt } from &quot;../../components/diagram-gant/diagramGantConcretical/metaDiagramGant.js&quot;;
+import { RssDiagramGantNEW } from &quot;../../components/diagram-gant/diagramGantConcretical/RssDiagramGant.js&quot;;
+import SwitchDiagramRss from &quot;../../components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js&quot;;
+import { TimelineGant } from &quot;../../components/diagram-gant/TimelineGant.js&quot;;
+import dateUtils from &quot;../../utils/dateUtils.js&quot;;
+
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;)
+export const callersAndRssGroupDiagramGant = new CallersKaRssDiagramGantNEW(&apos;#modalWindowGraphKaRssGroup .diagram-gant&apos;, &apos;&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&apos;);
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; (1)
+export const callersDiagramGant = new CallersOverlayGant(&apos;#modalWindowGraph .graph-3&apos;, &apos;&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&apos;);
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438; (2)
+export const sessionsDiagramGant = new SessionsDiagramGant(&apos;#modalWindowGraph .diagram-gant-sessions&apos;, &apos;&#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;);
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; (2)
+export const callersDiagramGant2 = new CallersOverlayGantNEW(&apos;#modalWindowGraphSecond .diagram-gant-2&apos;, &apos;&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&apos;);
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; (3)
+export const generalDiagramGant = new GeneralDiagramGant(&apos;#modalWindowGraphSecond .diagram-line-all&apos;, &apos;&#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;);
+// &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; ==&gt; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x422;&#x430;&#x439;&#x43C;&#x43B;&#x430;&#x439;&#x43D; (1)
+export const timelineGant = new TimelineGant(&apos;#modalWindowGraphSecond .digram-gant--height-timeline .timeline&apos;);
+// &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; ==&gt; &#x413;&#x440;&#x430;&#x444;&#x438;&#x43A; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; (1)
+export const callersDiagramGant3 = new CallersDiagramGantNEW(&apos;#modalShowCellers .diagram-gant&apos;, &apos;&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&apos;);
+// &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421; ==&gt; &#x413;&#x440;&#x430;&#x444;&#x438;&#x43A; (&#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430;) ==&gt; &#x420;&#x421;&#x421;. &#x420;&#x430;&#x441;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421; (1)
+export const rssDiagramGant = new RssDiagramGantNEW(&apos;#modalShowRSS .diagram-gant&apos;, &apos;&#x420;&#x421;&#x421;. &#x420;&#x430;&#x441;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;&apos;)
+
+const activeDiogramSeans = new DiagramGantBase(&apos;#modal-show-active-seans .diogram-active&apos;, &apos;&#x410;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x432; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x438;&#x439; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;&apos;);
+activeDiogramSeans.setFormatNoneData(&apos;&#x41D;&#x435;&#x442; &#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x44B;&#x445; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432;&apos;);
+const archiveDiogramSeans = new DiagramGantBase(&apos;#modal-show-archive-seans .diogram-archive&apos;, &apos;&#x410;&#x440;&#x445;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;);
+// &#x420;&#x421;&#x421;&#x421;
+export const rssPlanAntenDiagram = new DiagramGantBase(&apos;#modal-show-rss-plan-anten .diogram-dostup&apos;, &apos;&#x41F;&#x43B;&#x430;&#x43D; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x430;&#x43D;&#x442;&#x435;&#x43D;&#x43D; &#x420;&#x421;&#x421;&apos;);
+export const rssPlanKolisionDiagram = new DiagramGantBase(&apos;#modal_show_planRSSKolision .rss-kolision-diogram&apos;, &apos;&#x41A;&#x43E;&#x43B;&#x43B;&#x438;&#x438; &#x43D;&#x430;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x420;&#x421;&#x421; &#x43D;&#x430; &#x41A;&#x410;&apos;);
+
+
+export function showActiveDiogramsSeans(start, tekDate, data) {
+    const dataDiograms = []
+    // &#x418;&#x449;&#x435;&#x43C; &#x43C;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443;
+    let minDate = null;
+    data.forEach(seans =&gt; {
+        const { session_data } = seans;
+        const date = new Date(session_data.Data_Vyz)
+        if ((date &lt;= minDate &amp;&amp; !isNaN(date)) || minDate === null) {
+            minDate = date;
+        }
+    })
+    if (minDate === null) {
+        return activeDiogramSeans.setFormatData(tekDate, tekDate, dataDiograms);
+    };
+    data.forEach(seans =&gt; {
+        const { ID: id_seans, session_data } = seans;
+        const row = {
+            name: `
+            &lt;div style=&apos;
+                width: 100%; 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                text-align: left;
+                font-weight: normal;
+                font-size: 18px;
+            &apos;&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;:&lt;/td&gt;
+                        &lt;td&gt;&#x410;&#x431;. ${session_data.ID_Abonent_T1}&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;:&lt;/td&gt;
+                        &lt;td&gt;&#x410;&#x431;. ${session_data.ID_Abonent_T2}&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            `,
+            // &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: left;&quot;&gt;
+            // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;: &#x410;&#x431;. ${session_data.ID_Abonent_T1}&lt;br&gt;
+            // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&amp;nbsp: &#x410;&#x431;. ${session_data.ID_Abonent_T2}
+            // &lt;/div&gt;
+            
+            styles: {
+                &apos;gridTemplateColumns&apos;: &apos;500px 0px 1fr&apos;,
+
+            },
+            classes: [],
+            lines: [
+                {
+                    nameElement: {
+                        name: &apos;&apos;,
+                        styles: {
+
+                        },
+                        classes: [],
+                    },
+                    captionElement: {
+                        caption: `
+                        &#x412;&#x44B;&#x437;&#x43E;&#x432;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Vyz))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Beg))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E; &#x440;&#x430;&#x437;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;/&#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x438;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Beg_Razg))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        `,
+                        styles: {},
+                        classes: [],
+                    },
+                    emptySetting: {
+                        name: &apos;&apos;,
+                        styles: {},
+                        classes: [],
+                    },
+                    blocksSetting: {
+                        styles: {},
+                        classes: [],
+                    },
+                    allBlocksSetting: {
+                        styles: {},
+                        classes: [],
+                    },
+                    blocks: [
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430;
+                        {
+                            start: new Date(session_data.Data_Vyz),
+                            end: new Date(session_data.Data_Otv),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Otv) - new Date(session_data.Data_Vyz)) / 1000),
+                            selected: true,
+                            styles: {
+                                &apos;background-color&apos;: &apos;#76c8d3&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x44F;
+                        {
+                            start: new Date(session_data.Data_Otv),
+                            end: new Date(session_data.Data_Beg),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Beg) - new Date(session_data.Data_Otv)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#a4e7c1&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;
+                        {
+                            start: new Date(session_data.Data_Beg),
+                            end: new Date(session_data.Data_Beg_Razg),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Beg_Razg) - new Date(session_data.Data_Beg)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#3357FF&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x440;&#x430;&#x437;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;/&#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x438;
+                        {
+                            start: new Date(session_data.Data_Beg_Razg),
+                            end: tekDate,
+                            caption: dateUtils.secondsToHMS((tekDate - new Date(session_data.Data_Beg_Razg)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#a17dc4&apos;,
+                            },
+                            classes: [],
+                        },
+
+                    ],
+                },
+            ],
+        }
+
+        dataDiograms.push(row)
+    })
+
+    activeDiogramSeans.setCaptionFormatter((formattedStart, formattedEnd, formattedInterval) =&gt; {
+        return `${formattedEnd}`
+    })
+    activeDiogramSeans.setFormatData(minDate, tekDate, dataDiograms);
+}
+
+export function showArchiveDiogramsSeans(start, end, data) {
+    const dataDiograms = []
+    // &#x418;&#x449;&#x435;&#x43C; &#x43C;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443;
+    let minDate = null;
+    let maxDate = null;
+    data.forEach(seans =&gt; {
+        const { session_data } = seans;
+        const date = new Date(session_data.Data_Vyz)
+        if ((date &lt;= minDate &amp;&amp; !isNaN(date)) || minDate === null) {
+            minDate = date;
+        }
+        if ((date &gt;= maxDate &amp;&amp; !isNaN(date)) || maxDate === null) {
+            maxDate = date;
+        }
+    })
+
+    data.forEach(seans =&gt; {
+        const { ID: id_seans, session_data } = seans;
+
+        const row = {
+            name: `
+            &lt;div style=&apos;
+                width: 100%; 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                text-align: left;
+                font-weight: normal;
+                font-size: 18px;
+            &apos;&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;:&lt;/td&gt;
+                        &lt;td&gt;&#x410;&#x431;. ${session_data.ID_Abonent_T1}&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x439; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;:&lt;/td&gt;
+                        &lt;td&gt;&#x410;&#x431;. ${session_data.ID_Abonent_T2}&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+            `,
+            styles: {
+                &apos;gridTemplateColumns&apos;: &apos;500px 0px 1fr&apos;,
+            },
+            classes: [],
+            lines: [
+                {
+                    nameElement: {
+                        name: &apos;&apos;,
+                        styles: {
+
+                        },
+                        classes: [],
+                    },
+                    captionElement: {
+                        caption: `
+                        &#x412;&#x44B;&#x437;&#x43E;&#x432;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Vyz))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Beg))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E; &#x440;&#x430;&#x437;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;/&#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x438;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_Beg_Razg))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &#x417;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43D;&#x438;&#x435;: ${dateUtils.formatDisplayDateTime(new Date(session_data.Data_End))}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        `,
+                        styles: {},
+                        classes: [],
+                    },
+                    emptySetting: {
+                        name: &apos;&apos;,
+                        styles: {},
+                        classes: [],
+                    },
+                    blocksSetting: {
+                        styles: {},
+                        classes: [],
+                    },
+                    allBlocksSetting: {
+                        styles: {},
+                        classes: [],
+                    },
+                    blocks: [
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430;
+                        {
+                            start: new Date(session_data.Data_Vyz),
+                            end: new Date(session_data.Data_Otv),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Otv) - new Date(session_data.Data_Vyz)) / 1000),
+                            selected: true,
+                            styles: {
+                                &apos;background-color&apos;: &apos;#76c8d3&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x44F;
+                        {
+                            start: new Date(session_data.Data_Otv),
+                            end: new Date(session_data.Data_Beg),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Beg) - new Date(session_data.Data_Otv)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#a4e7c1&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;
+                        {
+                            start: new Date(session_data.Data_Beg),
+                            end: new Date(session_data.Data_Beg_Razg),
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_Beg_Razg) - new Date(session_data.Data_Beg)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#3357FF&apos;,
+                            },
+                            classes: [],
+                        },
+                        // &#x414;&#x430;&#x442;&#x430; &#x438; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x440;&#x430;&#x437;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;/&#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x438;
+                        {
+                            start: new Date(session_data.Data_Beg_Razg),
+                            end: session_data.Data_End,
+                            caption: dateUtils.secondsToHMS((new Date(session_data.Data_End) - new Date(session_data.Data_Beg_Razg)) / 1000),
+                            styles: {
+                                &apos;background-color&apos;: &apos;#a17dc4&apos;,
+                            },
+                            classes: [],
+                        },
+
+                    ],
+                },
+            ],
+        }
+
+        dataDiograms.push(row)
+    })
+    archiveDiogramSeans.setCaptionFormatter((start, end, interval) =&gt; {
+        return `&#x417;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434; &#x441; ${start} &#x43F;&#x43E; ${end}.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &#x41F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;: ${interval}`
+    })
+    archiveDiogramSeans.setFormatData(start, maxDate, dataDiograms);
+}
+
+export function showRssPlanAntenDiagram(start, end, data) {
+    const dataDiograms = []
+    // ID_KA-ID_RSS
+    const cashBlocks = {}
+    // ID_KA
+    const cashLines = {}
+    data.forEach(rssSeans =&gt; {
+        const {
+            ID,
+            ID_KA,
+            Data_Time_In1,
+            Shirota_KA1,
+            Dolgota_KA1,
+            H_KA1,
+            Data_Time_In2,
+            Shirota_KA2,
+            Dolgota_KA2,
+            H_KA2,
+            Data_Time_Out,
+            ID_RSS,
+            ID_RSS_Ant,
+            Shirota_RSS,
+            Dolgota_RSS,
+            H_RSS,
+            Azimut1,
+            UM1,
+            Azimut2,
+            UM2,
+            ID_Err,
+
+            KA_NAME,
+            RSS_NAME
+        } = rssSeans;
+
+
+        const id_seans = `${ID_KA}-${ID_RSS}`
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x443; &#x435;&#x441;&#x43B;&#x438; &#x43D;&#x435;&#x442;&#x443; &#x41A;&#x410;
+        if (!(ID_KA in cashLines)) {
+            const lines = []
+            const group = {
+                name: `&lt;span style=&quot;font-size: 16px&quot;&gt;${KA_NAME}&lt;/span&gt;`,
+                styles: {},
+                classes: [],
+                lines: lines
+            }
+            dataDiograms.push(group)
+            cashLines[ID_KA] = lines;
+        }
+        const lines = cashLines[ID_KA]
+        // &#x415;&#x441;&#x43B;&#x438; &#x43D;&#x435;&#x442;&#x443; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E;
+        if (!(id_seans in cashBlocks)) {
+            const blocks = []
+            const line = {
+                nameElement: {
+                    name:  `&#x420;&#x421;&#x421; ${RSS_NAME} &lt;br&gt;&lt;span&gt;   &#x428;&#x438;&#x440;&#x43E;&#x442;&#x430;: ${Shirota_RSS} &lt;br&gt;&#x414;&#x43E;&#x43B;&#x433;&#x43E;&#x442;&#x430;: ${Dolgota_RSS} &lt;br&gt; &#x410;&#x43D;&#x442;&#x435;&#x43D;&#x43D;&#x430;: ${ID_RSS_Ant} &lt;/span&gt;`,
+                    styles: {
+                        fontSize: &apos;14px&apos;,
+                        fontWeight: &apos;bold&apos;,
+                    },
+                    classes: [],
+                },
+                captionElement: {
+                    caption: &apos;...&apos;,
+                    styles: {},
+                    classes: [],
+                },
+                emptySetting: {
+                    name: &apos;&#x41D;&#x435;&#x442; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;,
+                    styles: {},
+                    classes: [],
+                },
+                blocksSetting: {
+                    styles: {},
+                    classes: [],
+                    allStyles: {},
+                    allClasses: [],
+                },
+                blocks: blocks
+            }
+            lines.push(line)
+            cashBlocks[id_seans] = blocks
+        }
+
+        
+        const blocks = cashBlocks[id_seans]
+        // azimuth
+        // angle
+        const block = {
+            start: new Date(Data_Time_In1),
+            end: new Date(Data_Time_Out),
+            angle: UM1,
+            azimuth: Azimut1,
+            caption: dateUtils.secondsToHMS((new Date(Data_Time_Out).getTime() - new Date(Data_Time_In1).getTime()) / 1000),
+            styles: {
+                &apos;background-color&apos;: &apos;#22B14C&apos;,
+            },
+            classes: [],
+        }
+        blocks.push(block)
+        
+    })
+
+    for (const [ID_KA, lines] of Object.entries(cashLines)) {
+        lines.forEach(line =&gt; {
+            line.captionElement.caption = blocksToCaptionExt(line.blocks)
+        })       
+    }
+
+    rssPlanAntenDiagram.setCaptionFormatter((start, end, interval) =&gt; {
+        return `&#x41D;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434; &#x441; ${start} &#x43F;&#x43E; ${end}.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &#x41F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;: ${interval}`
+    })
+    rssPlanAntenDiagram.setFormatData(start, end, dataDiograms);
+}
+
+export function showRssPlanAntenKolision(start, end, data) {
+    const dataDiograms = []
+    // ID_KA-ID_RSS
+    const cashBlocks = {}
+    // ID_KA
+    const cashLines = {}
+    data.forEach(rssSeans =&gt; {
+        const {
+            ID,
+            ID_KA,
+            Data_Time_In1,
+            Shirota_KA1,
+            Dolgota_KA1,
+            H_KA1,
+            Data_Time_In2,
+            Shirota_KA2,
+            Dolgota_KA2,
+            H_KA2,
+            Data_Time_Out,
+            ID_RSS,
+            ID_RSS_Ant,
+            Shirota_RSS,
+            Dolgota_RSS,
+            H_RSS,
+            Azimut1,
+            UM1,
+            Azimut2,
+            UM2,
+            ID_Err,
+
+            KA_NAME,
+            RSS_NAME,
+            ENABLED
+        } = rssSeans;
+
+
+        const id_seans = `${ID_KA}-${ID_RSS}`
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x443; &#x435;&#x441;&#x43B;&#x438; &#x43D;&#x435;&#x442;&#x443; &#x41A;&#x410;
+        if (!(ID_KA in cashLines)) {
+            const lines = []
+            const group = {
+                name: `&lt;span style=&quot;font-size: 16px&quot;&gt;${KA_NAME}&lt;/span&gt;`,
+                styles: {},
+                classes: [],
+                lines: lines
+            }
+            dataDiograms.push(group)
+            cashLines[ID_KA] = lines;
+        }
+        const lines = cashLines[ID_KA]
+        // &#x415;&#x441;&#x43B;&#x438; &#x43D;&#x435;&#x442;&#x443; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E;
+        if (!(id_seans in cashBlocks)) {
+            const blocks = []
+            const line = {
+                nameElement: {
+                    name:  `&#x420;&#x421;&#x421; &lt;br&gt; ${RSS_NAME} &lt;br&gt;&lt;span&gt; &#x428;&#x438;&#x440;&#x43E;&#x442;&#x430;: ${Shirota_RSS} &lt;br&gt;&#x414;&#x43E;&#x43B;&#x433;&#x43E;&#x442;&#x430;: ${Dolgota_RSS}&lt;/span&gt;`,
+                    styles: {
+                        fontSize: &apos;14px&apos;,
+                        fontWeight: &apos;bold&apos;,
+                    },
+                    classes: [],
+                },
+                captionElement: {
+                    caption: &apos;...&apos;,
+                    styles: {},
+                    classes: [],
+                },
+                emptySetting: {
+                    name: &apos;&#x41D;&#x435;&#x442; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;,
+                    styles: {},
+                    classes: [],
+                },
+                blocksSetting: {
+                    styles: {},
+                    classes: [],
+                    allStyles: {},
+                    allClasses: [],
+                },
+                blocks: blocks
+            }
+            lines.push(line)
+            cashBlocks[id_seans] = blocks
+        }
+
+        
+        const blocks = cashBlocks[id_seans]
+        // azimuth
+        // angle
+        const block = {
+            start: new Date(Data_Time_In1),
+            end: new Date(Data_Time_Out),
+            angle: UM1,
+            azimuth: Azimut1,
+            caption: dateUtils.secondsToHMS((new Date(Data_Time_Out).getTime() - new Date(Data_Time_In1).getTime()) / 1000),
+            classes: [],
+            styles: {}
+        }
+        if (ENABLED) {
+            block.styles = {
+                &apos;background-color&apos;: &apos;#22B14C&apos;,
+            }
+        }
+        blocks.push(block)
+        
+    })
+
+    for (const [ID_KA, lines] of Object.entries(cashLines)) {
+        lines.forEach(line =&gt; {
+            line.captionElement.caption = blocksToCaptionExt(line.blocks)
+        })       
+    }
+
+    rssPlanKolisionDiagram.setCaptionFormatter((start, end, interval) =&gt; {
+        return `&#x41D;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434; &#x441; ${start} &#x43F;&#x43E; ${end}.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &#x41F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;: ${interval}`
+    })
+    rssPlanKolisionDiagram.setFormatData(start, end, dataDiograms);
+}
+
+
+
+export const rssSwitchDiagramGant = new SwitchDiagramRss(&apos;#modalShowRSS .switch-rss&apos;)
+
+
+function groupBySatellite(data) {
+    const result = {};
+
+    // &#x41F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x441;&#x442;&#x430;&#x43D;&#x446;&#x438;&#x438; (&#x420;&#x421;&#x421;)
+    data.forEach(station =&gt; {
+        const stationName = station.name;  // &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421; &#x441; HTML
+
+        // &#x41F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x43C;&#x443; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x443; (&#x41A;&#x410;)
+        station.lines.forEach(line =&gt; {
+            const satelliteName = line.nameElement.name;  // &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430; (&#x41A;&#x410;)
+
+            // &#x415;&#x441;&#x43B;&#x438; &#x442;&#x430;&#x43A;&#x43E;&#x439; &#x41A;&#x410; &#x435;&#x449;&#x435; &#x43D;&#x435;&#x442; &#x432; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;&#x430;&#x445;, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x435;&#x433;&#x43E;
+            if (!result[satelliteName]) {
+                result[satelliteName] = {
+                    name: `&lt;span style=&quot;font-size: 16px&quot;&gt;${satelliteName}&lt;/span&gt;`,
+                    lines: []
+                };
+            }
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x420;&#x421;&#x421; &#x43A; &#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x41A;&#x410;
+            result[satelliteName].lines.push({
+                nameElement: { name: stationName, styles: line.nameElement.styles },  // &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421;
+                emptySetting: line.emptySetting,
+                captionElement: line.captionElement,
+                blocks: line.blocks
+            });
+        });
+    });
+
+    // &#x41F;&#x440;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x443;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x432; &#x43C;&#x430;&#x441;&#x441;&#x438;&#x432;
+    const resultArray = Object.values(result);
+
+    // &#x421;&#x43E;&#x440;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x43C;&#x430;&#x441;&#x441;&#x438;&#x432; &#x43F;&#x43E; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x44F;&#x43C; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;
+    resultArray.sort((a, b) =&gt; a.name.localeCompare(b.name));
+
+    // &#x412;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x43C; &#x43E;&#x442;&#x441;&#x43E;&#x440;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x43C;&#x430;&#x441;&#x441;&#x438;&#x432;
+    return resultArray;
+}
+
+rssSwitchDiagramGant.kaData = null;
+
+
+
+rssSwitchDiagramGant.addCallback((type) =&gt; {
+    if (type !== &apos;ka&apos;) return;
+    rssSwitchDiagramGant.kaData = rssDiagramGant.saveData
+    const data = groupBySatellite(rssDiagramGant.saveData);
+    rssDiagramGant.setFormatData(rssDiagramGant.start, rssDiagramGant.end, data);
+    
+})
+
+rssSwitchDiagramGant.addCallback((type) =&gt; {
+    if (type !== &apos;rss&apos;) return;
+    if (!rssSwitchDiagramGant.kaData) return;
+    rssDiagramGant.setFormatData(rssDiagramGant.start, rssDiagramGant.end, rssSwitchDiagramGant.kaData)
+})</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

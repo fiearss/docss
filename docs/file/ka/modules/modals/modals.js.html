@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">ka/modules/modals/modals.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api-v2">api_v2</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API">API</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-checkbox-manager">components/checkbox-manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant">components/diagram-gant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-diagramgantconcretical">components/diagram-gant/diagramGantConcretical</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-switch-diagram-rss">components/diagram-gant/switch-diagram-rss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-interval">components/interval</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-loader">components/loader</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-modal">components/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-panel-standart">components/panel/standart</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-state">components/state</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables">components/tables</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-activesessiontable">components/tables/ActiveSessionTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-zanrsstable">components/tables/ZanRssTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-channelplantable">components/tables/channelPlanTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-hpptable">components/tables/hppTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-timer">components/timer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-animations">modules/animations</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animate">animate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-checkboxmanager">modules/checkboxManager</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-diagrams">modules/diagrams</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-infoblocks">modules/infoBlocks</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-map">modules/map</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-map">map</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-overlay">overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-modals">modules/modals</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-monitoring">modules/monitoring</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-interval">interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-pages">modules/pages</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pages">pages</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-savescreen">modules/saveScreen</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-state">modules/state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MAP">MAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-USER">USER</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-tables">modules/tables</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-user">modules/user</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logout">logout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-combo-box">ui/combo-box</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-dropdown">ui/dropdown</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-time-input">ui/time-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-toggle">ui/toggle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delay">delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">ka/modules/modals/modals.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { KaApi } from &quot;../../api/kaApi.js&quot;;
+import Modal from &quot;../../components/modal/Modal.js&quot;;
+import ModalNotification from &quot;../../components/modal/ModalNotification.js&quot;;
+import ModalPopNotifs from &quot;../../components/modal/ModalPopNotifs.js&quot;;
+import { callersDiagramGant, sessionsDiagramGant, callersDiagramGant2, generalDiagramGant, callersDiagramGant3, rssDiagramGant, callersAndRssGroupDiagramGant, rssPlanAntenDiagram, rssPlanKolisionDiagram } from &quot;../diagrams/diagrams.js&quot;;
+import { pages } from &quot;../pages/pages.js&quot;;
+import { chChPlanTable, chChPlanTablePanel, generateOrbitCheckboxes, hhpTable, hhpTablePanel, zanRssTableControl } from &quot;../tables/tables.js&quot;;
+
+import { showKolision, showRssLoadSession, showRssPlanAnten, showRssZan } from &quot;../../modules/action/action.js&quot;;
+import { GLOBAL_PERIOD, KA_SELECTS, RSS_SELECTS, SEANCE, MAP } from &quot;../../modules/state/state.js&quot;;
+
+
+
+/**
+ * &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x444;&#x435;&#x439;&#x441;&#x430;
+ * &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x438;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x435; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43E;&#x43A;&#x43D;&#x430;
+ */
+
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43A;
+const buttonOpenSettings = document.querySelector(&apos;.button-settings&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x41A;&#x410;
+const buttonOpenKA = document.querySelector(&apos;.button-select-ka&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x420;&#x421;&#x421;
+const buttonOpenRSS = document.querySelector(&apos;.button-select-rss&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430; &#x430;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;
+const buttonOpenLogin = document.querySelector(&apos;#btn-login&apos;);
+
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; =&gt; &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;
+const buttonOpenModalSession = document.querySelector(&apos;#ModalWindowGraph&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; =&gt; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438;
+const buttonOpenAllModalSession = document.querySelector(&apos;#ModalWindowGraphSecond&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x420;&#x421;&#x421; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421; =&gt; &#x413;&#x440;&#x430;&#x444;&#x438;&#x43A;
+const buttonOpenGraphRss = document.querySelector(&apos;#btn-parameters-8-show-graph&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;
+const buttonOpenGraphRssAndKaGroup = document.querySelector(&apos;#ModalWindowGraphKaRssGroup&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; =&gt; &#x413;&#x440;&#x430;&#x444;&#x438;&#x43A;
+const buttonOpenGraphCallers = document.querySelector(&apos;#btn-parameters-3-show-graph&apos;);
+
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x427;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x44B;&#x439; &#x43F;&#x43B;&#x430;&#x43D; =&gt; &#x427;&#x41F;&#x41F; =&gt; &#x427;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x43E;-&#x43F;&#x43E;&#x43B;&#x44F;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x43F;&#x43B;&#x430;&#x43D;
+const buttonOpenFreeKaTable = document.querySelector(&apos;#btn-parameters-9-show-matrix&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x41E;&#x427;&#x420; =&gt; &#x427;&#x41F; &#x41E;&#x427;&#x420; =&gt; &#x427;&#x41F; &#x41E;&#x427;&#x420;
+const buttonOpenCHP_OCHR = document.querySelector(&apos;#btn-parameters-10-show-matrix-second&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x41A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C; =&gt; &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x420;&#x421;&#x421; =&gt; &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x420;&#x421;&#x421;
+const buttonOpenRssMatrix = document.querySelector(&apos;#btn-parameters-19-show-matrix&apos;);
+
+
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportCallers = document.querySelector(&apos;#btn-report-callers-3&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x420;&#x421;&#x421; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x435; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportRss = document.querySelector(&apos;#btn-report-callers-8&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x41A;&#x410; =&gt; &#x41E;&#x440;&#x431;&#x438;&#x442;&#x44B;/&#x442;&#x440;&#x430;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x438; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportOrbitTrajectory = document.querySelector(&apos;#btn-parameters-report-2&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x41A;&#x410; =&gt; &#x414;&#x432;&#x438;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x41A;&#x410; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportMoveKA = document.querySelector(&apos;#btn-parameters-reports-1&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x420;&#x421;&#x421; =&gt; &#x420;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportPlacementRss = document.querySelector(&apos;#btn-param-6-report&apos;);
+// &#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; =&gt; &#x41E;&#x431;&#x449;&#x438;&#x435; &#x441;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F; =&gt; &#x41E;&#x442;&#x447;&#x451;&#x442;
+const buttonOpenReportGeneralInfo = document.querySelector(&apos;#btn-parameters-report-4&apos;);
+
+//&#x41A;&#x43D;&#x43E;&#x43F;&#x43A;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;: &#x423;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x44F;
+const buttonOpenPopNotifs = document.querySelector(&apos;#btn-notifs-show&apos;);
+
+const buttonOpenShowActiveSeans = document.querySelector(&apos;#panel-parameters-11 .show-diogram&apos;);
+const buttonOpenShowArchiveSeans = document.querySelector(&apos;#panel-parameters-12 .show-diogram&apos;);
+const buttonOpenKSYS= document.querySelector(&apos;#panel-parameters-14 .btn-modal&apos;);
+
+
+const buttonOpenShowRssPlanAnten = document.querySelector(&apos;#panel-parameters-100 .show-diogram&apos;)
+const buttonOpenShowKolision = document.querySelector(&apos;#panel-parameters-20 .show-diogram&apos;)
+
+/**
+ * &#x418;&#x43D;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43E;&#x43A;&#x43E;&#x43D;
+ */
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43A;
+export const modalSettings = new Modal(&apos;modalWindow&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x41A;&#x410;
+export const modalKA = new Modal(&apos;modalWindowChooseKA&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x420;&#x421;&#x421;
+export const modalRSS = new Modal(&apos;modalWindowChooseRSS&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x43E;&#x432; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;
+export const modalSession = new Modal(&apos;modalWindowGraph&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x432;&#x44F;&#x437;&#x438;
+export const modalAllSession = new Modal(&apos;modalWindowGraphSecond&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;
+export const modalGraphCallers = new Modal(&apos;modalShowCellers&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;
+export const modalGraphRss = new Modal(&apos;modalShowRSS&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x447;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x43E;-&#x43F;&#x43E;&#x43B;&#x44F;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43B;&#x430;&#x43D;&#x430;
+export const modalFreeKaTable = new Modal(&apos;modalShowFreeKaTable&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;
+export const modalGraphKaRssGroup = new Modal(&apos;modalWindowGraphKaRssGroup&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x427;&#x41F; &#x41E;&#x427;&#x420;
+export const modalCHP_OCHR = new Modal(&apos;modalCHP_OCHR&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x420;&#x421;&#x421;
+export const modalRssMatrix = new Modal(&apos;modal_show_planRSSantenn&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x430;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;
+export const modalLogin = new Modal(&apos;modal-login&apos;);
+
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&quot;
+export const modalReportCallers = new Modal(&apos;modal-report-callers-3&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x420;&#x421;&#x421; =&gt; &#x420;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421;&quot;
+export const modalReportRss = new Modal(&apos;modal-report-rss-8&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x41A;&#x410; =&gt; &#x41E;&#x440;&#x431;&#x438;&#x442;&#x44B;/&#x442;&#x440;&#x430;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x438;&quot;
+export const modalReportOrbitTrajectory = new Modal(&apos;modal-orbit-trajectory-reports&apos;);
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; =&gt; &#x41E;&#x431;&#x449;&#x438;&#x435; &#x441;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F;&quot;
+export const modalReportGeneralInfo = new Modal(&apos;modal-report-general-info&apos;);
+
+export const modalShowActiveSeans = new Modal(&apos;modal-show-active-seans&apos;);
+export const modalShowArchiveSeans = new Modal(&apos;modal-show-archive-seans&apos;);
+export const modalShowKSYS = new Modal(&apos;modal-show-KSYS&apos;);
+
+// &#x420;&#x421;&#x421;
+export const modalShowRssPlanAnten = new Modal(&apos;modal-show-rss-plan-anten&apos;);
+export const modalShowPlanRSSKolision = new Modal(&apos;modal_show_planRSSKolision&apos;);
+
+
+// &#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x44D;&#x43A;&#x440;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x440;&#x435;&#x436;&#x438;&#x43C;&#x430; &#x434;&#x43B;&#x44F; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x445; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43E;&#x43A;&#x43E;&#x43D;
+modalSession.fullScreen();
+modalAllSession.fullScreen();
+modalGraphCallers.fullScreen();
+modalGraphRss.fullScreen();
+modalFreeKaTable.fullScreen();
+modalGraphKaRssGroup.fullScreen();
+modalCHP_OCHR.fullScreen();
+modalRssMatrix.fullScreen();
+modalShowActiveSeans.fullScreen();
+modalShowArchiveSeans.fullScreen();
+modalShowKSYS.fullScreen();
+modalShowRssPlanAnten.fullScreen();
+modalShowPlanRSSKolision.fullScreen();
+
+// &#x41C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435;
+export const modalNotification = new ModalNotification(&apos;.modal-notification&apos;);
+export const modalPopNotifs = new ModalPopNotifs(&apos;#modal-popup-notif&apos;);
+
+/**
+ * &#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x447;&#x438;&#x43A;&#x438; &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x439;
+ * &#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x447;&#x438;&#x43A;&#x438; &#x43A;&#x43B;&#x438;&#x43A;&#x43E;&#x432; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x438;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x435; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43E;&#x43A;&#x43D;&#x430;
+ */
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x41A;&#x410; =&gt; &#x414;&#x432;&#x438;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x41A;&#x410;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x41A;&#x410; =&gt; &#x41E;&#x440;&#x431;&#x438;&#x442;&#x44B;/&#x442;&#x440;&#x430;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x438;&quot;
+buttonOpenReportMoveKA.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportOrbitTrajectory.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x41A;&#x410; =&gt; &#x41E;&#x440;&#x431;&#x438;&#x442;&#x44B;/&#x442;&#x440;&#x430;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x438;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x41A;&#x410; =&gt; &#x41E;&#x440;&#x431;&#x438;&#x442;&#x44B;/&#x442;&#x440;&#x430;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x438;&quot;
+buttonOpenReportOrbitTrajectory.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportOrbitTrajectory.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; =&gt; &#x41E;&#x431;&#x449;&#x438;&#x435; &#x441;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; =&gt; &#x41E;&#x431;&#x449;&#x438;&#x435; &#x441;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F;&quot;
+buttonOpenReportGeneralInfo.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportGeneralInfo.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43A;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43A;
+buttonOpenSettings.addEventListener(&apos;click&apos;, () =&gt; {
+    modalSettings.open();
+});
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x41A;&#x410;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x41A;&#x410; &#x438; &#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x441;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x447;&#x435;&#x43A;&#x431;&#x43E;&#x43A;&#x441;&#x43E;&#x432; &#x43E;&#x440;&#x431;&#x438;&#x442;
+buttonOpenKA.addEventListener(&apos;click&apos;, () =&gt; {
+    modalKA.open();
+    generateOrbitCheckboxes();
+});
+
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x44B; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x43E;&#x432; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;
+buttonOpenModalSession.addEventListener(&apos;click&apos;, () =&gt; {
+    modalSession.open();
+});
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x420;&#x421;&#x421;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x420;&#x421;&#x421;
+buttonOpenRSS.addEventListener(&apos;click&apos;, () =&gt; {
+    modalRSS.open();
+});
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x432;&#x44F;&#x437;&#x438;
+buttonOpenAllModalSession.addEventListener(&apos;click&apos;, () =&gt; {
+    modalAllSession.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;&quot;
+buttonOpenReportCallers.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportCallers.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;
+buttonOpenGraphCallers.addEventListener(&apos;click&apos;, () =&gt; {
+    modalGraphCallers.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; pop-up &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439;
+buttonOpenPopNotifs.addEventListener(&apos;click&apos;, () =&gt; {
+    modalPopNotifs.toggle();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x427;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x43E;-&#x43F;&#x43E;&#x43B;&#x44F;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x43F;&#x43B;&#x430;&#x43D; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x427;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x44B;&#x439; &#x43F;&#x43B;&#x430;&#x43D; =&gt; &#x427;&#x41F;&#x41F;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x447;&#x430;&#x441;&#x442;&#x43E;&#x442;&#x43D;&#x43E;-&#x43F;&#x43E;&#x43B;&#x44F;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43B;&#x430;&#x43D;&#x430;
+buttonOpenFreeKaTable.addEventListener(&apos;click&apos;, () =&gt; {
+    modalFreeKaTable.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x420;&#x421;&#x421; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;
+buttonOpenGraphRss.addEventListener(&apos;click&apos;, () =&gt; {
+    modalGraphRss.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x421;&#x435;&#x430;&#x43D;&#x441;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438; =&gt; &#x41F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x44B;&#x435;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;
+buttonOpenGraphRssAndKaGroup.addEventListener(&apos;click&apos;, () =&gt; {
+    modalGraphKaRssGroup.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x427;&#x41F; &#x41E;&#x427;&#x420; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x41E;&#x427;&#x420; =&gt; &#x427;&#x41F; &#x41E;&#x427;&#x420;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x427;&#x41F; &#x41E;&#x427;&#x420;
+buttonOpenCHP_OCHR.addEventListener(&apos;click&apos;, () =&gt; {
+    modalCHP_OCHR.open();
+})
+
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x427;&#x41F; &#x41E;&#x427;&#x420; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x417;&#x430;&#x43D;&#x44F;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x41E;&#x427;&#x420; =&gt; &#x427;&#x41F; &#x41E;&#x427;&#x420;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x427;&#x41F; &#x41E;&#x427;&#x420;
+buttonOpenRssMatrix.addEventListener(&apos;click&apos;, () =&gt; {
+    modalRssMatrix.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x430;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x430;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;
+buttonOpenLogin.addEventListener(&apos;click&apos;, () =&gt; {
+    modalLogin.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x420;&#x421;&#x421; =&gt; &#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x435; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x420;&#x421;&#x421; =&gt; &#x420;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421;&quot;
+buttonOpenReportRss.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportRss.open();
+})
+
+// &#x41F;&#x440;&#x438; &#x43D;&#x430;&#x436;&#x430;&#x442;&#x438;&#x438; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &#x432;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x435; &#x420;&#x421;&#x421; =&gt; &#x420;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421;, &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x43E;&#x442;&#x447;&#x435;&#x442;&#x430; &quot;&#x420;&#x421;&#x421; =&gt; &#x420;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x420;&#x421;&#x421;&quot;
+buttonOpenReportPlacementRss.addEventListener(&apos;click&apos;, () =&gt; {
+    modalReportRss.open();
+})
+
+buttonOpenShowActiveSeans.addEventListener(&apos;click&apos;, () =&gt; {
+    modalShowActiveSeans.open();
+})
+
+buttonOpenShowArchiveSeans.addEventListener(&apos;click&apos;, () =&gt; {
+    modalShowArchiveSeans.open();
+})
+
+buttonOpenKSYS.addEventListener(&apos;click&apos;, () =&gt; {
+    modalShowKSYS.open();
+})
+
+buttonOpenShowRssPlanAnten.addEventListener(&apos;click&apos;, () =&gt; {
+    modalShowRssPlanAnten.open();
+})
+
+buttonOpenShowKolision.addEventListener(&apos;click&apos;, () =&gt; {
+    modalShowPlanRSSKolision.open();
+})
+
+
+// &#x420;&#x421;&#x421;
+
+// modalShowRssPlanAnten.onOpen(() =&gt; {
+//     if (rssPlanAntenDiagram.isSetData) return
+//     modalShowRssPlanAnten.close();
+//     modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+//         &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x43F;&#x440;&#x43E;&#x438;&#x437;&#x432;&#x435;&#x441;&#x442;&#x438; &#x440;&#x430;&#x441;&#x441;&#x447;&#x435;&#x442;&#x44B;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x440;&#x430;&#x441;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x435;.&apos;,
+//         () =&gt; {
+//             pages.setActive(&apos;panel-parameters-100&apos;);
+//         }
+//     );
+// })
+
+modalShowPlanRSSKolision.onOpen(() =&gt; {
+    if (rssPlanKolisionDiagram.isSetData) return
+    showKolision(KA_SELECTS.ids, RSS_SELECTS.ids, GLOBAL_PERIOD.start, GLOBAL_PERIOD.end, SEANCE.step, parseInt((GLOBAL_PERIOD.end.getTime() - GLOBAL_PERIOD.start.getTime()) / 60 / 1000));
+})
+
+modalShowRssPlanAnten.onOpen(() =&gt; {
+    if (rssPlanAntenDiagram.isSetData) return
+    showRssPlanAnten(KA_SELECTS.ids, RSS_SELECTS.ids, GLOBAL_PERIOD.start, GLOBAL_PERIOD.end, SEANCE.step, parseInt((GLOBAL_PERIOD.end.getTime() - GLOBAL_PERIOD.start.getTime()) / 60 / 1000));
+})
+
+modalRssMatrix.onOpen(() =&gt; {
+    console.log(&apos;modalRssMatrix&apos;)
+    if (zanRssTableControl.isCreated) return
+    showRssZan(
+        KA_SELECTS.ids, RSS_SELECTS.ids,
+        GLOBAL_PERIOD.start, GLOBAL_PERIOD.end, SEANCE.step,
+        parseInt((GLOBAL_PERIOD.end.getTime() - GLOBAL_PERIOD.start.getTime()) / 60 / 1000),
+    );
+})
+
+// &#x41A;&#x43E;&#x43D;&#x435;&#x446; &#x420;&#x421;&#x421;
+
+/*
+* &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x441;&#x44F; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x438; &#x43D;&#x430; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x43B;&#x44F; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43A;&#x43D;&#x430;
+* &#x415;&#x441;&#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43E;&#x442;&#x441;&#x443;&#x442;&#x441;&#x442;&#x432;&#x443;&#x44E;&#x442;, &#x442;&#x43E; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x43A;&#x43D;&#x43E; &#x441; &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x438; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x449;&#x430;&#x435;&#x442; &#x43D;&#x430; &#x434;&#x440;&#x443;&#x433;&#x443;&#x44E; &#x43F;&#x430;&#x43D;&#x435;&#x43B;&#x44C;
+*/
+
+modalReportCallers.onOpen(() =&gt; {
+    if (callersDiagramGant2.isSetData &amp;&amp; generalDiagramGant.isSetData) return
+    modalReportCallers.close();
+    modalNotification.openNotification(
+        &apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-3&apos;);
+        }
+    );
+})
+
+
+modalReportOrbitTrajectory.onOpen(() =&gt; {
+
+    if (callersAndRssGroupDiagramGant.isSetData) return
+    modalReportOrbitTrajectory.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-3&apos;);
+        }
+    );
+
+    if (rssDiagramGant.isSetData) return
+    modalReportOrbitTrajectory.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x440;&#x430;&#x441;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x435; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x440;&#x430;&#x441;&#x447;&#x435;&#x442;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x445; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-8&apos;);
+        }
+    );
+})
+
+
+modalSession.onOpen(() =&gt; {
+    if (callersDiagramGant2.isSetData &amp;&amp; generalDiagramGant.isSetData) return
+    modalSession.close();
+    modalNotification.openNotification(
+        &apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-3&apos;);
+        }
+    );
+})
+
+modalAllSession.onOpen(() =&gt; {
+    if (callersDiagramGant.isSetData &amp;&amp; sessionsDiagramGant.isSetData) return
+    modalAllSession.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-3&apos;);
+        }
+    );
+})
+
+modalGraphCallers.onOpen(() =&gt; {
+    if (callersDiagramGant3.isSetData) return
+    modalGraphCallers.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            modalGraphCallers.close();
+        }
+    );
+})
+
+// modalGraphRss.onOpen(() =&gt; {
+//     if (rssDiagramGant.isSetData) return
+//     modalGraphRss.close();
+//     modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+//         &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x440;&#x430;&#x441;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x435; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &quot;&#x420;&#x430;&#x441;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C;&quot;.&apos;,
+//         () =&gt; {
+//             modalGraphCallers.close();
+//         }
+//     );
+// })
+
+modalGraphRss.onOpen(() =&gt; {
+    if (rssDiagramGant.isSetData) return
+    showRssLoadSession(KA_SELECTS.ids, RSS_SELECTS.ids, GLOBAL_PERIOD.start, GLOBAL_PERIOD.end, SEANCE.step, parseInt((GLOBAL_PERIOD.end.getTime() - GLOBAL_PERIOD.start.getTime()) / 60 / 1000)); // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E; &#x434;&#x43B;&#x44F; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x420;&#x421;&#x421; &#x438; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43A;&#x438;
+})
+
+modalGraphKaRssGroup.onOpen(() =&gt; {
+    if (callersAndRssGroupDiagramGant.isSetData) return
+    modalGraphKaRssGroup.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x43E;&#x432;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-3&apos;);
+        }
+    );
+})
+
+modalReportRss.onOpen(() =&gt; {
+    if (rssDiagramGant.isSetData) return
+    modalReportRss.close();
+    modalNotification.openNotification(&apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;,
+        &apos;&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x440;&#x430;&#x441;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410; &#x434;&#x43B;&#x44F; &#x420;&#x421;&#x421;.&lt;br&gt;&#x41D;&#x430;&#x436;&#x43C;&#x438;&#x442;&#x435; &#x43D;&#x430; &#x43A;&#x43D;&#x43E;&#x43F;&#x43A;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x443; &#x440;&#x430;&#x441;&#x447;&#x435;&#x442;&#x430;.&apos;,
+        () =&gt; {
+            pages.setActive(&apos;panel-parameters-8&apos;);
+        }
+    );
+})
+
+modalCHP_OCHR.onOpen(() =&gt; {
+    chChPlanTablePanel.refresh()
+})
+
+modalCHP_OCHR.onClose(() =&gt; {
+    chChPlanTablePanel.setAutorefresh(false)
+})
+
+
+modalFreeKaTable.onOpen(() =&gt; {
+    hhpTablePanel.refresh()
+})
+
+
+modalFreeKaTable.onClose(() =&gt; {
+    hhpTablePanel.setAutorefresh(false)
+})</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

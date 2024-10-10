@@ -1,0 +1,397 @@
+[
+  {
+    "name": "DiagramGant#addRow",
+    "filePath": "ka/components/diagram-gant/diagramGant.js",
+    "lines": [
+      {
+        "lineNumber": 179,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 180,
+        "line": "     * Добавляет строку в указанный групповой блок с заданным именем. `row-sputnik`\r"
+      },
+      {
+        "lineNumber": 181,
+        "line": "     *\r"
+      },
+      {
+        "lineNumber": 182,
+        "line": "     * @param {HTMLElement} groupBlock - Групповой блок, в который будет добавлена строка.\r"
+      },
+      {
+        "lineNumber": 183,
+        "line": "     * @param {string} name - Имя строки.\r"
+      },
+      {
+        "lineNumber": 184,
+        "line": "     * @return {HTMLElement} Созданный элемент строки `diogram-gant__row-interval`.\r"
+      },
+      {
+        "lineNumber": 185,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 186,
+        "line": "    addRow(groupBlock, name, bold = false, is_line_sep = false, name_style = '') {\r"
+      }
+    ],
+    "codeParams": [
+      "groupBlock",
+      "name",
+      "bold",
+      "is_line_sep",
+      "name_style"
+    ],
+    "docParams": [
+      "groupBlock",
+      "name"
+    ]
+  },
+  {
+    "name": "DiagramGant#addLineData",
+    "filePath": "ka/components/diagram-gant/diagramGant.js",
+    "lines": [
+      {
+        "lineNumber": 218,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 219,
+        "line": "     * Добавляет строку с данными в указанный элемент строки.\r"
+      },
+      {
+        "lineNumber": 220,
+        "line": "     *\r"
+      },
+      {
+        "lineNumber": 221,
+        "line": "     * @param {HTMLElement} line - Элемент строки, в который будет добавлена строка с данными.\r"
+      },
+      {
+        "lineNumber": 222,
+        "line": "     * @param {number} start - Начальное время данных.\r"
+      },
+      {
+        "lineNumber": 223,
+        "line": "     * @param {number} end - Конечное время данных.\r"
+      },
+      {
+        "lineNumber": 224,
+        "line": "     * @param {string} [name=''] - Имя данных. По умолчанию - пустая строка.\r"
+      },
+      {
+        "lineNumber": 225,
+        "line": "     * @param {boolean} [selected=false] - Являются ли данные выбранными или нет. По умолчанию - false.\r"
+      },
+      {
+        "lineNumber": 226,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 227,
+        "line": "    addLineData(line, start, end, name = '', selected = false, bg = null, transparent = false) {\r"
+      }
+    ],
+    "codeParams": [
+      "line",
+      "start",
+      "end",
+      "name",
+      "selected",
+      "bg",
+      "transparent"
+    ],
+    "docParams": [
+      "line",
+      "start",
+      "end",
+      "name",
+      "selected"
+    ]
+  },
+  {
+    "name": "GeneralDiagramGant#setData",
+    "filePath": "ka/components/diagram-gant/diagramGant.js",
+    "lines": [
+      {
+        "lineNumber": 529,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 530,
+        "line": "     * Устанавливает данные для компонента.\r"
+      },
+      {
+        "lineNumber": 531,
+        "line": "     *\r"
+      },
+      {
+        "lineNumber": 532,
+        "line": "     * @param {Date} start - Начальная дата периода.\r"
+      },
+      {
+        "lineNumber": 533,
+        "line": "     * @param {Date} end - Конечная дата периода.\r"
+      },
+      {
+        "lineNumber": 534,
+        "line": "     * @param {Array} data - Массив объектов. Каждый объект содержит следующие свойства:\r"
+      },
+      {
+        "lineNumber": 535,
+        "line": "     *   - `{string} start_datetime_iso` - Дата начала сессии в формате ISO.\r"
+      },
+      {
+        "lineNumber": 536,
+        "line": "     *   - `{string} end_datetime_iso` - Дата конца сессии в формате ISO.\r"
+      },
+      {
+        "lineNumber": 537,
+        "line": "     *   - `{number} duration_in_sec` - Длительность сессии в секундах.\r"
+      },
+      {
+        "lineNumber": 538,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 539,
+        "line": "    setData(start, end, data, callers_data) {\r"
+      }
+    ],
+    "codeParams": [
+      "start",
+      "end",
+      "data",
+      "callers_data"
+    ],
+    "docParams": [
+      "start",
+      "end",
+      "data"
+    ]
+  },
+  {
+    "name": "RssKallisionTable#addRow",
+    "filePath": "ka/components/tables/RssKallisionTable.js",
+    "lines": [
+      {
+        "lineNumber": 73,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 74,
+        "line": "     * Добавляет строку в таблицу.\r"
+      },
+      {
+        "lineNumber": 75,
+        "line": "     * @param {string} name - Имя РСС.\r"
+      },
+      {
+        "lineNumber": 76,
+        "line": "     * @param {string} start - Время начала обмена данными.\r"
+      },
+      {
+        "lineNumber": 77,
+        "line": "     * @param {string} end - Время окончания обмена данными.\r"
+      },
+      {
+        "lineNumber": 78,
+        "line": "     * @param {number} interval - Продолжительность обмена данными в секундах.\r"
+      },
+      {
+        "lineNumber": 79,
+        "line": "     * @param {number} lat - Широта КА.\r"
+      },
+      {
+        "lineNumber": 80,
+        "line": "     * @param {number} lon - Долгота КА.\r"
+      },
+      {
+        "lineNumber": 81,
+        "line": "     * @param {number} height - Высота КА над ур.м.\r"
+      },
+      {
+        "lineNumber": 82,
+        "line": "     * @param {number} angle - Угол места.\r"
+      },
+      {
+        "lineNumber": 83,
+        "line": "     * @param {number} azimuth - Азимут.\r"
+      },
+      {
+        "lineNumber": 84,
+        "line": "     * @param {Object} data - Данные обмена данными.\r"
+      },
+      {
+        "lineNumber": 85,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 86,
+        "line": "    addRow(name, start, end, interval, lat, lon, height, angle, azimuth) {\r"
+      }
+    ],
+    "codeParams": [
+      "name",
+      "start",
+      "end",
+      "interval",
+      "lat",
+      "lon",
+      "height",
+      "angle",
+      "azimuth"
+    ],
+    "docParams": [
+      "name",
+      "start",
+      "end",
+      "interval",
+      "lat",
+      "lon",
+      "height",
+      "angle",
+      "azimuth",
+      "data"
+    ]
+  },
+  {
+    "name": "RssNewIntervalsTable#addRow",
+    "filePath": "ka/components/tables/RssNewIntervalsTable.js",
+    "lines": [
+      {
+        "lineNumber": 73,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 74,
+        "line": "     * Добавляет строку в таблицу.\r"
+      },
+      {
+        "lineNumber": 75,
+        "line": "     * @param {string} name - Имя РСС.\r"
+      },
+      {
+        "lineNumber": 76,
+        "line": "     * @param {string} start - Время начала обмена данными.\r"
+      },
+      {
+        "lineNumber": 77,
+        "line": "     * @param {string} end - Время окончания обмена данными.\r"
+      },
+      {
+        "lineNumber": 78,
+        "line": "     * @param {number} interval - Продолжительность обмена данными в секундах.\r"
+      },
+      {
+        "lineNumber": 79,
+        "line": "     * @param {number} lat - Широта КА.\r"
+      },
+      {
+        "lineNumber": 80,
+        "line": "     * @param {number} lon - Долгота КА.\r"
+      },
+      {
+        "lineNumber": 81,
+        "line": "     * @param {number} height - Высота КА над ур.м.\r"
+      },
+      {
+        "lineNumber": 82,
+        "line": "     * @param {number} angle - Угол места.\r"
+      },
+      {
+        "lineNumber": 83,
+        "line": "     * @param {number} azimuth - Азимут.\r"
+      },
+      {
+        "lineNumber": 84,
+        "line": "     * @param {Object} data - Данные обмена данными.\r"
+      },
+      {
+        "lineNumber": 85,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 86,
+        "line": "    addRow(name, start, end, interval, lat, lon, height, angle, azimuth) {\r"
+      }
+    ],
+    "codeParams": [
+      "name",
+      "start",
+      "end",
+      "interval",
+      "lat",
+      "lon",
+      "height",
+      "angle",
+      "azimuth"
+    ],
+    "docParams": [
+      "name",
+      "start",
+      "end",
+      "interval",
+      "lat",
+      "lon",
+      "height",
+      "angle",
+      "azimuth",
+      "data"
+    ]
+  },
+  {
+    "name": "ThemerManagment#addTimerElement",
+    "filePath": "ka/components/timer/TimerManagment.js",
+    "lines": [
+      {
+        "lineNumber": 13,
+        "line": "  /**\r"
+      },
+      {
+        "lineNumber": 14,
+        "line": "   * Добавляет элемент таймера в массив элементов таймера\r"
+      },
+      {
+        "lineNumber": 15,
+        "line": "   *\r"
+      },
+      {
+        "lineNumber": 16,
+        "line": "   * @param {HTMLDivElement|string} element - Элемент таймера, который нужно добавить.\r"
+      },
+      {
+        "lineNumber": 17,
+        "line": "   * @param {HTMLDivElement|string} element - Элемент таймера, который нужно добавить.\r"
+      },
+      {
+        "lineNumber": 18,
+        "line": "   * Это может быть либо HTMLDivElement, либо строка, представляющая селектор.\r"
+      },
+      {
+        "lineNumber": 19,
+        "line": "   * @throws {Error} - Выбрасывает ошибку, если элемент не найден.\r"
+      },
+      {
+        "lineNumber": 20,
+        "line": "   * @return {number} - Возвращает длину массива timerElements после добавления.\r"
+      },
+      {
+        "lineNumber": 21,
+        "line": "   */\r"
+      },
+      {
+        "lineNumber": 22,
+        "line": "  addTimerElement(element) {\r"
+      }
+    ],
+    "codeParams": [
+      "element"
+    ],
+    "docParams": [
+      "element",
+      "element"
+    ]
+  }
+]

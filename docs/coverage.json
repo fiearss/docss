@@ -1,0 +1,714 @@
+{
+  "coverage": "45.8%",
+  "expectCount": 631,
+  "actualCount": 289,
+  "files": {
+    "ka/api/authApi.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "ka/api/kaApi.js": {
+      "expectCount": 18,
+      "actualCount": 11,
+      "undocumentLines": [
+        12,
+        13,
+        14,
+        17,
+        20,
+        25,
+        36
+      ]
+    },
+    "ka/api/reportApi.js": {
+      "expectCount": 9,
+      "actualCount": 6,
+      "undocumentLines": [
+        8,
+        9,
+        12
+      ]
+    },
+    "ka/api_v2/index.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        11,
+        25
+      ]
+    },
+    "ka/api_v2/kaApi.js": {
+      "expectCount": 16,
+      "actualCount": 1,
+      "undocumentLines": [
+        3,
+        4,
+        8,
+        17,
+        24,
+        34,
+        38,
+        42,
+        59,
+        66,
+        70,
+        74,
+        92,
+        100,
+        108
+      ]
+    },
+    "ka/api_v2/kaApiPrew.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        4,
+        8,
+        24
+      ]
+    },
+    "ka/api_v2/reportApi.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        4,
+        8,
+        12
+      ]
+    },
+    "ka/api_v2/_SomeBaseAPI.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        11
+      ]
+    },
+    "ka/components/checkbox-manager/CheckboxManager.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "ka/components/diagram-gant/diagramGant.js": {
+      "expectCount": 29,
+      "actualCount": 22,
+      "undocumentLines": [
+        23,
+        25,
+        26,
+        28,
+        30,
+        32,
+        522
+      ]
+    },
+    "ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        11
+      ]
+    },
+    "ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        4,
+        5,
+        18,
+        26,
+        38,
+        42
+      ]
+    },
+    "ka/components/diagram-gant/TimelineGant.js": {
+      "expectCount": 17,
+      "actualCount": 9,
+      "undocumentLines": [
+        6,
+        14,
+        17,
+        20,
+        21,
+        24,
+        26,
+        74
+      ]
+    },
+    "ka/components/interval/Interval.js": {
+      "expectCount": 14,
+      "actualCount": 12,
+      "undocumentLines": [
+        1,
+        9
+      ]
+    },
+    "ka/components/loader/Loader.js": {
+      "expectCount": 10,
+      "actualCount": 6,
+      "undocumentLines": [
+        9,
+        16,
+        28,
+        68
+      ]
+    },
+    "ka/components/loader/LoadingManager.js": {
+      "expectCount": 12,
+      "actualCount": 10,
+      "undocumentLines": [
+        1,
+        79
+      ]
+    },
+    "ka/components/modal/ModalNotification.js": {
+      "expectCount": 17,
+      "actualCount": 16,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "ka/components/panel/standart/control.js": {
+      "expectCount": 12,
+      "actualCount": 2,
+      "undocumentLines": [
+        3,
+        8,
+        9,
+        10,
+        12,
+        13,
+        16,
+        50,
+        56,
+        79
+      ]
+    },
+    "ka/components/state/State.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "ka/components/tables/ActiveSessionTable/ActiveSessionTable.js": {
+      "expectCount": 14,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        17,
+        21,
+        28,
+        40,
+        50,
+        62,
+        99,
+        158,
+        197
+      ]
+    },
+    "ka/components/tables/ActiveSessionTable/control.js": {
+      "expectCount": 12,
+      "actualCount": 2,
+      "undocumentLines": [
+        3,
+        8,
+        9,
+        10,
+        12,
+        13,
+        16,
+        50,
+        56,
+        79
+      ]
+    },
+    "ka/components/tables/ActiveSessionTable/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "ka/components/tables/ActiveSessionTable/ModalInfo.js": {
+      "expectCount": 8,
+      "actualCount": 5,
+      "undocumentLines": [
+        14,
+        37,
+        59
+      ]
+    },
+    "ka/components/tables/ActiveSessionTable/Table.js": {
+      "expectCount": 10,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        17,
+        22
+      ]
+    },
+    "ka/components/tables/ActiveSessionTable/_control.js": {
+      "expectCount": 15,
+      "actualCount": 2,
+      "undocumentLines": [
+        3,
+        10,
+        12,
+        17,
+        25,
+        34,
+        35,
+        37,
+        38,
+        41,
+        46,
+        52,
+        77
+      ]
+    },
+    "ka/components/tables/CallersIntervalsTable.js": {
+      "expectCount": 19,
+      "actualCount": 12,
+      "undocumentLines": [
+        5,
+        34,
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    "ka/components/tables/channelPlanTable/controlPanel.js": {
+      "expectCount": 14,
+      "actualCount": 4,
+      "undocumentLines": [
+        17,
+        19,
+        24,
+        34,
+        43,
+        45,
+        46,
+        55,
+        58,
+        99
+      ]
+    },
+    "ka/components/tables/channelPlanTable/ModalChannelPlan.js": {
+      "expectCount": 7,
+      "actualCount": 5,
+      "undocumentLines": [
+        14,
+        37
+      ]
+    },
+    "ka/components/tables/hppTable/controlPanel.js": {
+      "expectCount": 14,
+      "actualCount": 4,
+      "undocumentLines": [
+        17,
+        19,
+        24,
+        34,
+        43,
+        45,
+        46,
+        55,
+        58,
+        99
+      ]
+    },
+    "ka/components/tables/hppTable/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "ka/components/tables/hppTable/ModalChannelPlan.js": {
+      "expectCount": 7,
+      "actualCount": 5,
+      "undocumentLines": [
+        14,
+        37
+      ]
+    },
+    "ka/components/tables/RssIntervalsTable.js": {
+      "expectCount": 6,
+      "actualCount": 5,
+      "undocumentLines": [
+        26
+      ]
+    },
+    "ka/components/tables/RssKallisionTable.js": {
+      "expectCount": 7,
+      "actualCount": 4,
+      "undocumentLines": [
+        27,
+        28,
+        31
+      ]
+    },
+    "ka/components/tables/RssNewIntervalsTable.js": {
+      "expectCount": 7,
+      "actualCount": 4,
+      "undocumentLines": [
+        27,
+        28,
+        31
+      ]
+    },
+    "ka/components/tables/ZanRssTable/ControlZanRssTable.js": {
+      "expectCount": 13,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        4,
+        5,
+        6,
+        33,
+        34,
+        35,
+        36,
+        38,
+        41,
+        58,
+        66,
+        70
+      ]
+    },
+    "ka/components/timer/Timer.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        13,
+        15,
+        17,
+        19
+      ]
+    },
+    "ka/components/timer/TimerManagment.js": {
+      "expectCount": 8,
+      "actualCount": 2,
+      "undocumentLines": [
+        3,
+        4,
+        5,
+        7,
+        9,
+        11
+      ]
+    },
+    "ka/index.js": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        27,
+        47,
+        48,
+        54,
+        63,
+        73,
+        81,
+        89,
+        96,
+        103,
+        109,
+        118
+      ]
+    },
+    "ka/modules/animations/animations.js": {
+      "expectCount": 6,
+      "actualCount": 2,
+      "undocumentLines": [
+        9,
+        11,
+        13,
+        14
+      ]
+    },
+    "ka/modules/checkboxManager/checkboxManager.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        14
+      ]
+    },
+    "ka/modules/diagrams/diagrams.js": {
+      "expectCount": 18,
+      "actualCount": 0,
+      "undocumentLines": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        34,
+        37,
+        175,
+        310,
+        424,
+        544,
+        547
+      ]
+    },
+    "ka/modules/infoBlocks/infoBlocks.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        17,
+        21
+      ]
+    },
+    "ka/modules/map/map.js": {
+      "expectCount": 8,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        29,
+        66,
+        90,
+        121,
+        155,
+        162,
+        165
+      ]
+    },
+    "ka/modules/modals/modals.js": {
+      "expectCount": 47,
+      "actualCount": 2,
+      "undocumentLines": [
+        22,
+        24,
+        26,
+        29,
+        31,
+        33,
+        35,
+        37,
+        40,
+        42,
+        44,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        61,
+        63,
+        64,
+        65,
+        68,
+        69,
+        77,
+        79,
+        81,
+        83,
+        85,
+        87,
+        89,
+        91,
+        93,
+        95,
+        97,
+        100,
+        102,
+        104,
+        106,
+        108,
+        109,
+        110,
+        113,
+        114,
+        133,
+        134
+      ]
+    },
+    "ka/modules/monitoring/monitoring.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "ka/modules/pages/pages.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "ka/modules/saveScreen/saveScreen.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "ka/modules/state/handlerState.js": {
+      "expectCount": 14,
+      "actualCount": 4,
+      "undocumentLines": [
+        14,
+        16,
+        18,
+        22,
+        24,
+        27,
+        29,
+        32,
+        153,
+        155
+      ]
+    },
+    "ka/modules/state/state.js": {
+      "expectCount": 6,
+      "actualCount": 2,
+      "undocumentLines": [
+        26,
+        51,
+        62,
+        72
+      ]
+    },
+    "ka/modules/tables/tables.js": {
+      "expectCount": 38,
+      "actualCount": 5,
+      "undocumentLines": [
+        32,
+        341,
+        345,
+        347,
+        349,
+        353,
+        355,
+        358,
+        359,
+        362,
+        363,
+        366,
+        369,
+        371,
+        373,
+        376,
+        387,
+        389,
+        391,
+        407,
+        418,
+        425,
+        466,
+        468,
+        469,
+        478,
+        485,
+        488,
+        489,
+        497,
+        499,
+        507,
+        509
+      ]
+    },
+    "ka/modules/user/user.js": {
+      "expectCount": 7,
+      "actualCount": 6,
+      "undocumentLines": [
+        54
+      ]
+    },
+    "ka/ui/combo-box/ComboBox.js": {
+      "expectCount": 11,
+      "actualCount": 10,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "ka/ui/dropdown/Dropdown.js": {
+      "expectCount": 16,
+      "actualCount": 13,
+      "undocumentLines": [
+        15,
+        24,
+        33
+      ]
+    },
+    "ka/ui/time-input/TimeInput.js": {
+      "expectCount": 5,
+      "actualCount": 3,
+      "undocumentLines": [
+        1,
+        7
+      ]
+    },
+    "ka/ui/toggle/toggle.js": {
+      "expectCount": 8,
+      "actualCount": 5,
+      "undocumentLines": [
+        17,
+        21,
+        30
+      ]
+    },
+    "ka/utils/animateUtils.js": {
+      "expectCount": 28,
+      "actualCount": 27,
+      "undocumentLines": [
+        2
+      ]
+    },
+    "ka/utils/dateUtils.js": {
+      "expectCount": 12,
+      "actualCount": 12,
+      "undocumentLines": []
+    },
+    "ka/utils/fetchUtils.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "ka/utils/screenUtils.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "ka/utils/tableUtils.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    }
+  }
+}

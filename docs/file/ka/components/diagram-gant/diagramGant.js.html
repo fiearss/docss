@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">ka/components/diagram-gant/diagramGant.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/authApi.js~AuthApi.html">AuthApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api-v2">api_v2</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/_SomeBaseAPI.js~_SomeBaseAPI.html">_SomeBaseAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApi.js~KaApi.html">KaApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/kaApiPrew.js~KaApiPrew.html">KaApiPrew</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/api_v2/reportApi.js~ReportApi.html">ReportApi</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-API">API</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-checkbox-manager">components/checkbox-manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/checkbox-manager/CheckboxManager.js~CheckboxManager.html">CheckboxManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant">components/diagram-gant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/TimelineGant.js~TimelineGant.html">TimelineGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~CallersOverlayGant.html">CallersOverlayGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~DiagramGant.html">DiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~GeneralDiagramGant.html">GeneralDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGant.js~SessionsDiagramGant.html">SessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-diagramgantconcretical">components/diagram-gant/diagramGantConcretical</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersDiagramGant.js~CallersDiagramGantNEW.html">CallersDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersKaRssDiagramGant.js~CallersKaRssDiagramGantNEW.html">CallersKaRssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/CallersOverlayGant.js~CallersOverlayGantNEW.html">CallersOverlayGantNEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/diagramGantConcretical/RssDiagramGant.js~RssDiagramGantNEW.html">RssDiagramGantNEW</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-diagram-gant-switch-diagram-rss">components/diagram-gant/switch-diagram-rss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/diagram-gant/switch-diagram-rss/SwitchDiagramRss.js~SwitchDiagramRss.html">SwitchDiagramRss</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-interval">components/interval</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/interval/Interval.js~Interval.html">Interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-loader">components/loader</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/Loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/loader/LoadingManager.js~LoadingManager.html">LoadingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-modal">components/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/modal/ModalNotification.js~ModalNotification.html">ModalNotification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-panel-standart">components/panel/standart</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/panel/standart/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-state">components/state</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/state/State.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables">components/tables</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/CallersIntervalsTable.js~CallersIntervalsTable.html">CallersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssIntervalsTable.js~RssIntervalsTable.html">RssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssKallisionTable.js~RssKallisionTable.html">RssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/RssNewIntervalsTable.js~RssNewIntervalsTable.html">RssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-activesessiontable">components/tables/ActiveSessionTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ActiveSessionTable.js~ActiveSessionTable.html">ActiveSessionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/ModalInfo.js~ModalInfo.html">ModalInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/Table.js~Table.html">Table</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/_control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ActiveSessionTable/control.js~Control.html">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeSessionTable">activeSessionTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-zanrsstable">components/tables/ZanRssTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/ZanRssTable/ControlZanRssTable.js~ControlZanRssTable.html">ControlZanRssTable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-channelplantable">components/tables/channelPlanTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/channelPlanTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-tables-hpptable">components/tables/hppTable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/ModalChannelPlan.js~ModalChannelPlan.html">ModalChannelPlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/tables/hppTable/controlPanel.js~ControlPanel.html">ControlPanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hppTableModule">hppTableModule</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-timer">components/timer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/components/timer/TimerManagment.js~ThemerManagment.html">ThemerManagment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-animations">modules/animations</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animate">animate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-checkboxmanager">modules/checkboxManager</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_CHECKBOX">KA_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_CHECKBOX">RSS_CHECKBOX</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-diagrams">modules/diagrams</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showActiveDiogramsSeans">showActiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showArchiveDiogramsSeans">showArchiveDiogramsSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenDiagram">showRssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showRssPlanAntenKolision">showRssPlanAntenKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersAndRssGroupDiagramGant">callersAndRssGroupDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant">callersDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant2">callersDiagramGant2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersDiagramGant3">callersDiagramGant3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-generalDiagramGant">generalDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssDiagramGant">rssDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanAntenDiagram">rssPlanAntenDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssPlanKolisionDiagram">rssPlanKolisionDiagram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssSwitchDiagramGant">rssSwitchDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sessionsDiagramGant">sessionsDiagramGant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-timelineGant">timelineGant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-infoblocks">modules/infoBlocks</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-animateInfoBlock">animateInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-trajInfoBlock">trajInfoBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanAntenRssInfoBlock">zanAntenRssInfoBlock</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-map">modules/map</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersLayers">callersLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-drawCallers">drawCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaLayers">kaLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-map">map</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-overlay">overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssLayers">rssLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-modals">modules/modals</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalAllSession">modalAllSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalCHP_OCHR">modalCHP_OCHR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalFreeKaTable">modalFreeKaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphCallers">modalGraphCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphKaRssGroup">modalGraphKaRssGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalGraphRss">modalGraphRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalKA">modalKA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalLogin">modalLogin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalNotification">modalNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalPopNotifs">modalPopNotifs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRSS">modalRSS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportCallers">modalReportCallers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportGeneralInfo">modalReportGeneralInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportOrbitTrajectory">modalReportOrbitTrajectory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalReportRss">modalReportRss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalRssMatrix">modalRssMatrix</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSession">modalSession</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalSettings">modalSettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowActiveSeans">modalShowActiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowArchiveSeans">modalShowArchiveSeans</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowKSYS">modalShowKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowPlanRSSKolision">modalShowPlanRSSKolision</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-modalShowRssPlanAnten">modalShowRssPlanAnten</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-monitoring">modules/monitoring</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-interval">interval</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-pages">modules/pages</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pages">pages</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-savescreen">modules/saveScreen</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadElement">downloadElement</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-state">modules/state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCurrentPeriod">updateCurrentPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GLOBAL_PERIOD">GLOBAL_PERIOD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-KA_SELECTS">KA_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MAP">MAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RSS_SELECTS">RSS_SELECTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEANCE">SEANCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-USER">USER</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-tables">modules/tables</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateOrbitCheckboxes">generateOrbitCheckboxes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataKATables">loadDataKATables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadDataRssTables">loadDataRssTables</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateActiveTable">updateActiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTable">activeTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-activeTablePanel">activeTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTable">archiveTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-archiveTablePanel">archiveTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callerGeoTable">callerGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-callersIntervalsTable">callersIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTable">chChPlanTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-chChPlanTablePanel">chChPlanTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlKSUS">controlKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-controlSOVKSYS">controlSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTable">hhpTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-hhpTablePanel">hhpTablePanel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoKSUS">infoKSUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-infoSOVKSYS">infoSOVKSYS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-kaTable">kaTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoBaseTable">rssGeoBaseTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoCollisionsTable">rssGeoCollisionsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTable">rssGeoTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssGeoTablePlan">rssGeoTablePlan</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssIntervalsTable">rssIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssKallisionTable">rssKallisionTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssNewIntervalsTable">rssNewIntervalsTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-rssTable">rssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTable">zanRssTable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zanRssTableControl">zanRssTableControl</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#modules-user">modules/user</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-auth_login">auth_login</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-logout">logout</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stateUpdate">stateUpdate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-combo-box">ui/combo-box</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/combo-box/ComboBox.js~ComboBox.html">ComboBox</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-dropdown">ui/dropdown</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/dropdown/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-time-input">ui/time-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/time-input/TimeInput.js~TimeInput.html">TimeInput</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui-toggle">ui/toggle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/ui/toggle/toggle.js~Toggle.html">Toggle</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/ka/utils/animateUtils.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-downloadPostFile">downloadPostFile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchGETData">fetchGETData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fetchPOSTData">fetchPOSTData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delay">delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenAsync">getScreenAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScreenElement">getScreenElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdByParam">getIdByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdsByParam">getIdsByParam</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dateUtils">dateUtils</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">ka/components/diagram-gant/diagramGant.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import dateUtils from &quot;../../utils/dateUtils.js&quot;;
+// TODO: &#x41F;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x432;&#x441;&#x435; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x44B; &#x447;&#x435;&#x440;&#x435;&#x437; DiagramGantBase &#x438; &#x443;&#x434;&#x430;&#x43B;&#x438;&#x442;&#x44C; &#x44D;&#x442;&#x43E;&#x442; &#x444;&#x430;&#x438;&#x306;&#x43B;
+
+
+/**
+ * &#x41A;&#x43B;&#x430;&#x441;&#x441; DiagramGant &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x43E;&#x431;&#x43E;&#x439; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+ * 
+ * &#x414;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x430; &#x413;&#x430;&#x43D;&#x442;&#x430; - &#x44D;&#x442;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x441;&#x441;&#x43E;&#x432; &#x438;&#x43B;&#x438; &#x437;&#x430;&#x434;&#x430;&#x447; &#x441;
+ * &#x43E;&#x431;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;&#x43C;&#x438;. &#x41A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442; &#x43E;&#x431;&#x435;&#x441;&#x43F;&#x435;&#x447;&#x438;&#x432;&#x430;&#x435;&#x442; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x435;
+ * &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430; &#x438; &#x435;&#x435; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x443; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+ */
+export class DiagramGant {
+
+    /**
+     * &#x41A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; DiagramGant.
+     *
+     * @param {string} selector - &#x421;&#x435;&#x43B;&#x435;&#x43A;&#x442;&#x43E;&#x440; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x438;&#x441;&#x43A;&#x430; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x432; DOM,
+     * &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x431;&#x443;&#x434;&#x435;&#x442; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x449;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x430; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+     * @param {string} diagramName - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;.
+     */
+    constructor(selector, diagramName = &apos;&apos;) {
+        // &#x41F;&#x43E;&#x438;&#x441;&#x43A; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x432; DOM &#x43F;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43D;&#x43E;&#x43C;&#x443; &#x441;&#x435;&#x43B;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x443;.
+        this.element = document.querySelector(selector);
+        // &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x438; &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x44B; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+        this.start = null;
+        this.end = null;
+        // &#x41E;&#x431;&#x449;&#x430;&#x44F; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+        this.global_interval = null;
+        // &#x424;&#x43B;&#x430;&#x433;, &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439; &#x43D;&#x430; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;.
+        this.isSetData = false;
+        // &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;.
+        this.diagramName = diagramName;
+    }
+
+    /**
+     * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x438; &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x44B; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     *
+     * @param {Date} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     */
+    setPeriod(start, end) {
+        this.start = start;
+        this.end = end;
+        this.global_interval = this.end - this.start;
+    }
+
+    /**
+     * &#x41E;&#x447;&#x438;&#x449;&#x430;&#x435;&#x442; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x43D;&#x435;&#x435; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x43E;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x438; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x444;&#x43B;&#x430;&#x433; isChange &#x432; false.
+     *
+     * &#x42D;&#x442;&#x43E;&#x442; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x43E;&#x447;&#x438;&#x449;&#x430;&#x435;&#x442; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x43D;&#x435;&#x435; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x43E;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;, &#x43D;&#x430; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x441;&#x441;&#x44B;&#x43B;&#x430;&#x435;&#x442;&#x441;&#x44F; this.element,
+     * &#x438; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x444;&#x43B;&#x430;&#x433; isChange &#x432; false. &#x424;&#x43B;&#x430;&#x433; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x434;&#x43B;&#x44F; &#x43E;&#x442;&#x441;&#x43B;&#x435;&#x436;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x44F;,
+     * &#x431;&#x44B;&#x43B;&#x438; &#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x44B;.
+     *
+     * @return {void} &#x42D;&#x442;&#x43E;&#x442; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x43D;&#x435; &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F;.
+     */
+    clear() {
+        // &#x41E;&#x447;&#x438;&#x449;&#x430;&#x435;&#x442; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x43D;&#x435;&#x435; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x43E;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;, &#x43D;&#x430; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x441;&#x441;&#x44B;&#x43B;&#x430;&#x435;&#x442;&#x441;&#x44F; this.element.
+        this.element.innerHTML = &apos;&apos;;
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x444;&#x43B;&#x430;&#x433; isChange &#x432; false.
+        this.isSetData = false;
+    }
+
+    /**
+     * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x430;.
+     *
+     * @param {Date} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Array} data - &#x414;&#x430;&#x43D;&#x43D;&#x44B;&#x435;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C;.
+     * @return {void}
+     */
+    setData(start, end, data) {
+        this.clear();
+        this.setPeriod(start, end);
+        this.isSetData = true;
+        this.setName(this.diagramName);
+        this.addDateBlock(start, end);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x431;&#x43B;&#x43E;&#x43A; &#x441; &#x434;&#x430;&#x442;&#x43E;&#x439; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x438; &#x434;&#x430;&#x442;&#x43E;&#x439; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x432; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+     *
+     * @param {Date} start - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x414;&#x430;&#x442;&#x430; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     */
+    addDateBlock(start, end) {
+        // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x438;
+        const formattedStart = dateUtils.formatDisplayDateTime(start); // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x434;&#x430;&#x442;&#x443; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430;
+        const formattedEnd = dateUtils.formatDisplayDateTime(end); // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x434;&#x430;&#x442;&#x443; &#x43A;&#x43E;&#x43D;&#x446;&#x430;
+        const interval = Math.round((end - start) / 1000);
+        const captionText = `&#x417;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434; c ${formattedStart} &#x43F;&#x43E; ${formattedEnd}.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x41F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430; &#x430;&#x43D;&#x430;&#x43B;&#x438;&#x437;&#x430;: ${dateUtils.secondsToHMS(interval)} &#x441;&#x435;&#x43A;.`; // &#x41E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x44F;&#x435;&#x43C; &#x432;&#x441;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x432; &#x43E;&#x434;&#x43D;&#x443; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;
+        const div = document.createElement(&apos;div&apos;);
+        div.classList.add(&apos;diagram-gant__date&apos;);
+        div.innerHTML = captionText;
+        this.element.appendChild(div);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x431;&#x43B;&#x43E;&#x43A; &#x441; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x435;&#x43C; &quot;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&quot; &#x432; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+     *
+     * @param {string} name - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x431;&#x43B;&#x43E;&#x43A;&#x430;. &#x41F;&#x43E; &#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E; &quot;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&quot;.
+     */
+    setNoneData(name = &apos;&#x41D;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;&apos;) {
+        const div = document.createElement(&apos;div&apos;);
+        div.classList.add(&apos;diagram-gant__none-data&apos;);
+        div.innerHTML = name;
+        this.element.appendChild(div);
+    }
+
+    /**
+     * &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x442; &#x434;&#x43E;&#x447;&#x435;&#x440;&#x43D;&#x438;&#x439; div &#x434;&#x43B;&#x44F; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x441; &#x435;&#x435; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C;.
+     *
+     * @param {string} divText - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;.
+     */
+    setName(divText) {
+        const diagramName = document.createElement(&apos;div&apos;);
+        diagramName.classList.add(&apos;diagram-gant__name&apos;);
+        diagramName.innerHTML = divText;
+        this.element.appendChild(diagramName);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x432; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x413;&#x430;&#x43D;&#x442;&#x438;.
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x432; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+     *
+     * @param {HTMLElement} groupBlock - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; HTML, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430;.
+     * @param {string} name - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {Date} start - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {Date} end - &#x414;&#x430;&#x442;&#x430; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {string} caption - &#x41F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x44C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {boolean} selected - &#x42F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43B;&#x438; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x43E;&#x439; &#x438;&#x43B;&#x438; &#x43D;&#x435;&#x442;.
+     * @param {string|null} bg - &#x426;&#x432;&#x435;&#x442; &#x444;&#x43E;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {boolean} transparent - &#x41F;&#x440;&#x43E;&#x437;&#x440;&#x430;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {boolean} is_bold - &#x416;&#x438;&#x440;&#x43D;&#x44B;&#x439; &#x448;&#x440;&#x438;&#x444;&#x442;.
+     * @param {string} empty_name - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;, &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x43D;&#x430; &#x43D;&#x430;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x432;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;.
+     * @param {boolean} is_line_sep - &#x420;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x43B;&#x438;&#x43D;&#x438;&#x44F;.
+     * @param {string} style - &#x421;&#x442;&#x438;&#x43B;&#x438; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     */
+    addRowGant(groupBlock, name, start, end, caption, selected = false, bg = null, transparent = false, is_bold = false, empty_name = &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;&apos;, is_line_sep = false, style = &apos;&apos;) {
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43D;&#x43E;&#x432;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;
+        const line = this.addRow(groupBlock, name, is_bold, is_line_sep, style);
+
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43A;&#x430; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;, &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x43D; &#x43D;&#x430;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x437;&#x430; &#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x430;&#x43C;&#x438; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;
+        if (this.start.getTime() !== start.getTime()) {
+            this.addLineNull(line, this.start, start, empty_name);
+        }
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43A;&#x430; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;
+        this.addLineData(line, start, end, caption, selected, bg, transparent);
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43A;&#x430; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;, &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x43D; &#x43D;&#x430;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x437;&#x430; &#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x430;&#x43C;&#x438; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;
+        if (this.end.getTime() !== end.getTime()) {
+            this.addLineNull(line, end, this.end, empty_name);
+        }
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x438; &#x43A; &#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x43E;&#x43C;&#x443; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43A;&#x443; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;
+        this.addCaptionData(line, start, end, caption);
+    }
+
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x43D;&#x430; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443;.
+     *
+     * @param {string} name - &#x418;&#x43C;&#x44F; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B; &#x431;&#x43B;&#x43E;&#x43A;&#x430;.
+     * @return {HTMLElement} &#x421;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B; &#x431;&#x43B;&#x43E;&#x43A;&#x430;.
+     */
+    addGroupBlock(name) {
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x43B;&#x44F; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B;
+        const groupBlock = document.createElement(&apos;div&apos;);
+        groupBlock.classList.add(&apos;diogram-gant__abonent&apos;);
+
+        const nameDiv = document.createElement(&apos;div&apos;);
+        nameDiv.classList.add(&apos;diogram-gant__row-name&apos;);
+        nameDiv.innerHTML = name;
+        groupBlock.append(nameDiv);
+        this.element.append(groupBlock);
+        return groupBlock;
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x432; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x441; &#x437;&#x430;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43C;. `row-sputnik`
+     *
+     * @param {HTMLElement} groupBlock - &#x413;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430;.
+     * @param {string} name - &#x418;&#x43C;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @return {HTMLElement} &#x421;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438; `diogram-gant__row-interval`.
+     */
+    addRow(groupBlock, name, bold = false, is_line_sep = false, name_style = &apos;&apos;) {
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x43B;&#x44F; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;
+        const nameBlock = document.createElement(&apos;div&apos;);
+        nameBlock.classList.add(&apos;diagram-gant__row-sputnik&apos;);
+        nameBlock.innerHTML = name;
+
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;
+        const line = document.createElement(&apos;div&apos;);
+        line.classList.add(&apos;diagram-gant__row-interval&apos;, &apos;row-interval&apos;, &apos;row-interval--procent&apos;);
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x438;&#x43B;&#x44C; &#x434;&#x43B;&#x44F; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;
+        if (bold) {
+            nameBlock.style.fontWeight = &apos;bold&apos;;
+        } else {
+            nameBlock.style.fontSize = &apos;14px&apos;;
+        }
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x438;&#x43B;&#x44C; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438;
+        if (is_line_sep) {
+            line.classList.add(&apos;diagram-gant__end-rows-block&apos;);
+        }
+
+        // &#x41F;&#x440;&#x438;&#x43C;&#x435;&#x43D;&#x44F;&#x435;&#x43C; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x441;&#x442;&#x438;&#x43B;&#x44C;
+        if (name_style) {
+            nameBlock.style.cssText += name_style;
+        }
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A;&#x438; &#x432; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A;
+        groupBlock.append(nameBlock, line);
+        return line
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x432; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     *
+     * @param {HTMLElement} line - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430; &#x441; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438;.
+     * @param {number} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+     * @param {number} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+     * @param {string} [name=&apos;&apos;] - &#x418;&#x43C;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;. &#x41F;&#x43E; &#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E; - &#x43F;&#x443;&#x441;&#x442;&#x430;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430;.
+     * @param {boolean} [selected=false] - &#x42F;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x441;&#x44F; &#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x438;&#x43B;&#x438; &#x43D;&#x435;&#x442;. &#x41F;&#x43E; &#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E; - false.
+     */
+    addLineData(line, start, end, name = &apos;&apos;, selected = false, bg = null, transparent = false) {
+        // &#x412;&#x44B;&#x447;&#x438;&#x441;&#x43B;&#x44F;&#x435;&#x43C; &#x440;&#x430;&#x437;&#x43D;&#x438;&#x446;&#x443; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x44B;&#x43C; &#x438; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;
+        const interval = end - start;
+
+        // &#x412;&#x44B;&#x447;&#x438;&#x441;&#x43B;&#x44F;&#x435;&#x43C; &#x434;&#x43E;&#x43B;&#x44E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430; &#x432; &#x43E;&#x442;&#x43D;&#x43E;&#x448;&#x435;&#x43D;&#x438;&#x438; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        const ration = interval / this.global_interval;
+
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x43B;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        const block = document.createElement(&apos;div&apos;);
+        block.classList.add(&apos;row-interval__block&apos;, &apos;row-interval__block--in&apos;);
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x438;&#x43B;&#x44C; &#x434;&#x43B;&#x44F; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        if (selected) {
+            block.classList.add(&apos;row-interval__block--selected&apos;);
+        }
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x438;&#x43B;&#x44C; &#x444;&#x43E;&#x43D;&#x430; &#x434;&#x43B;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        if (bg) {
+            block.style.background = bg;
+        }
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x442;&#x438;&#x43B;&#x44C; &#x434;&#x43B;&#x44F; &#x43F;&#x440;&#x43E;&#x437;&#x440;&#x430;&#x447;&#x43D;&#x44B;&#x445; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        if (transparent) {
+            block.classList.add(&apos;row-interval__block--transparent&apos;);
+        }
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x448;&#x438;&#x440;&#x438;&#x43D;&#x443; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x432; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x43D;&#x442;&#x430;&#x445;
+        block.style.width = `${ration * 100}%`;
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x432; &#x431;&#x43B;&#x43E;&#x43A;
+        this.addTextSpan(block, name + &quot; &#x441;&#x435;&#x43A;.&quot;);
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A; &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;
+        line.append(block);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x432; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+     *
+     * @param {HTMLElement} block - &#x411;&#x43B;&#x43E;&#x43A; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+     * @param {string} text - &#x422;&#x435;&#x43A;&#x441;&#x442; &#x434;&#x43B;&#x44F; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;.
+     */
+    addTextSpan(block, text) {
+        const span = document.createElement(&apos;span&apos;);
+        span.classList.add(&apos;row-interval__value-text&apos;);
+        span.innerHTML = text;
+        span.title = text;
+        block.append(span);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x44C; &#x441; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x435;&#x439; &#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;&#x445; &#x432; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     *
+     * @param {HTMLElement} line - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x430; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x44C;.
+     * @param {Date} start - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;.
+     * @param {Date} end - &#x414;&#x430;&#x442;&#x430; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;.
+     * @param {number} interval - &#x414;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430; &#x432; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x430;&#x445;.
+     */
+    addCaptionData(line, start, end, interval) {
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x438;
+        const caption = document.createElement(&apos;div&apos;);
+        caption.classList.add(&apos;row-interval__caption&apos;);
+
+        // &#x424;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x438;
+        const formattedStart = dateUtils.formatDisplayDateTime(start); // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x434;&#x430;&#x442;&#x443; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430;
+        const formattedEnd = dateUtils.formatDisplayDateTime(end); // &#x424;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x443;&#x435;&#x43C; &#x434;&#x430;&#x442;&#x443; &#x43A;&#x43E;&#x43D;&#x446;&#x430;
+        const captionText = `c ${formattedStart} &#x43F;&#x43E; ${formattedEnd}. &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x412;&#x440;&#x435;&#x43C;&#x44F; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438;: ${interval} &#x441;&#x435;&#x43A;.`; // &#x41E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x44F;&#x435;&#x43C; &#x432;&#x441;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x432; &#x43E;&#x434;&#x43D;&#x443; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;
+
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x438;
+        caption.innerHTML = captionText;
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43F;&#x43E;&#x434;&#x43F;&#x438;&#x441;&#x44C; &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;
+        line.append(caption);
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x435;&#x439; &#x43E; &#x43F;&#x440;&#x43E;&#x43C;&#x435;&#x436;&#x443;&#x442;&#x43A;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;, &#x432;&#x44B;&#x445;&#x43E;&#x434;&#x44F;&#x449;&#x435;&#x433;&#x43E; &#x437;&#x430; &#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44B; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+     *
+     * @param {HTMLElement} line - &#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D; &#x431;&#x43B;&#x43E;&#x43A;.
+     * @param {Date} start - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;.
+     * @param {Date} end - &#x414;&#x430;&#x442;&#x430; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x430;.
+     * @param {string} name - &#x41D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x431;&#x43B;&#x43E;&#x43A;&#x430;.
+     */
+    addLineNull(line, start, end, name = &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;&apos;) {
+        // &#x41A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; &#x432; &#x43F;&#x440;&#x43E;&#x43C;&#x435;&#x436;&#x443;&#x442;&#x43A;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;
+        const interval = end - start;
+        // &#x414;&#x43E;&#x43B;&#x44F; &#x43F;&#x440;&#x43E;&#x43C;&#x435;&#x436;&#x443;&#x442;&#x43A;&#x430; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x432; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        const ration = interval / this.global_interval;
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A;
+        const block = document.createElement(&apos;div&apos;);
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x44B; &#x434;&#x43B;&#x44F; &#x441;&#x442;&#x438;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;
+        block.classList.add(&apos;row-interval__block&apos;, &apos;row-interval__block--out&apos;);
+        // &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x448;&#x438;&#x440;&#x438;&#x43D;&#x443; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x432; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x43D;&#x442;&#x430;&#x445;
+        block.style.width = `${ration * 100}%`;
+        // &#x412;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x441;&#x442; &#x432; &#x431;&#x43B;&#x43E;&#x43A;
+        this.addTextSpan(block, name);
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x431;&#x43B;&#x43E;&#x43A; &#x432; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;
+        line.append(block);
+    }
+}
+
+/**
+ * &#x41A;&#x43B;&#x430;&#x441;&#x441; CallersOverlayGant &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x442; DiagramGant &#x438; &#x43E;&#x442;&#x432;&#x435;&#x447;&#x430;&#x435;&#x442; &#x437;&#x430; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x438; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x438;&#x445; &#x438; &#x438;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;&#x445; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+ */
+export class CallersOverlayGant extends DiagramGant {
+
+    /**
+     * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x43B;&#x44F; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+     *
+     * @param {Date} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x433;&#x43E; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x435;&#x43C;&#x43E;&#x433;&#x43E; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Object} data - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442;, &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x430;&#x449;&#x438;&#x439; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43E; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x438;&#x445; &#x438; &#x438;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;&#x445;.
+     */
+    setData(start, end, data) {
+        // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x440;&#x43E;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x434;&#x43B;&#x44F; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        super.setData(start, end, data);
+
+        // &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x43C;, &#x43F;&#x443;&#x441;&#x442;&#x44B; &#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435;
+        if (data.length === 0) {
+            this.setNoneData();
+            return;
+        }
+
+        const { callers_sats_data, first_acceptable_session, general_availability_of_sessions, sessions, united_satellite_data, callers_combined_availability } = data;
+
+        // &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x43C;, &#x43F;&#x443;&#x441;&#x442;&#x44B; &#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43E; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x438;&#x445; &#x438; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;&#x445;
+        if (callers_sats_data.length === 0 &amp;&amp; united_satellite_data.satellites_communication_data.length === 0 &amp;&amp; callers_combined_availability.length === 0) {
+            this.setNoneData();
+            return;
+        }
+
+        const united_satellite_dataDICT = {};
+
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x441;&#x43B;&#x43E;&#x432;&#x430;&#x440;&#x44C; &#x434;&#x43B;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;
+        for (const sat of united_satellite_data.satellites_communication_data) {
+            const { name, BSSs_and_callers_general_availability, BSSs_general_availability, BSSs_satellites_general_availability } = sat;
+            united_satellite_dataDICT[name] = {
+                BSSs_and_callers_general_availability,
+                BSSs_general_availability,
+                BSSs_satellites_general_availability,
+            };
+        }
+
+        const callers_combined_availabilityDICT = {};
+
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x441;&#x43B;&#x43E;&#x432;&#x430;&#x440;&#x44C; &#x434;&#x43B;&#x44F; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x438;&#x445;
+        for (const sat of callers_combined_availability) {
+            const { name, satellites_data, general_availability } = sat;
+            callers_combined_availabilityDICT[name] = {
+                satellites_data,
+                general_availability
+            };
+        }
+
+        // &#x41F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x438;&#x445; &#x438; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x433;&#x43E; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x435;&#x433;&#x43E; &#x438; &#x438;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;
+        for (const caller of callers_sats_data) {
+            const { name, satellites_data, general_availability } = caller;
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x43B;&#x44F; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x435;&#x433;&#x43E;
+            const groupBlock = this.addGroupBlock(name);
+
+            // &#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x430;&#x435;&#x43C; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43E; &#x432;&#x441;&#x435;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;&#x445; &#x438; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x433;&#x43E; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x435;&#x433;&#x43E;
+            const { satellites_data: all_sat_data, general_availability: all_gen_data } = callers_combined_availabilityDICT[name];
+
+            // &#x41F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x432;&#x441;&#x435;&#x445; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432; &#x438; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;
+            for (const satGen of all_sat_data) {
+                const { satellite_name, communication_interval } = satGen;
+                // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;
+                this.general_row(
+                    groupBlock,
+                    communication_interval,
+                    `${satellite_name} &#x432; &#x437;&#x43E;&#x43D;&#x435; &#x441;&#x432;&#x44F;&#x437;&#x438;`,
+                    &apos;rgb(204, 240, 243)&apos;,
+                    false
+                );
+            }
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43E;&#x431;&#x449;&#x443;&#x44E; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x434;&#x43B;&#x44F; &#x43E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x437;&#x432;&#x43E;&#x43D;&#x44F;&#x449;&#x435;&#x433;&#x43E;
+            this.general_row(groupBlock, all_gen_data, `${name} &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x41A;&#x410;`, &apos;#a4e7c1&apos;, true, &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;, false);
+        }
+    }
+
+    /**
+     * &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x43E;&#x431;&#x449;&#x438;&#x43C;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x43E; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438;.
+     *
+     * @param {Object} groupBlock - &#x413;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x434;&#x43B;&#x44F; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {Array} general_availability - &#x41C;&#x430;&#x441;&#x441;&#x438;&#x432; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x441;&#x442;&#x438;.
+     * @param {string} name - &#x418;&#x43C;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {string|null} bg - &#x426;&#x432;&#x435;&#x442; &#x444;&#x43E;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;.
+     * @param {boolean} bold - &#x424;&#x43B;&#x430;&#x433;, &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439;, &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x430; &#x43B;&#x438; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430; &#x431;&#x44B;&#x442;&#x44C; &#x436;&#x438;&#x440;&#x43D;&#x43E;&#x439;.
+     * @param {string} empty_name - &#x418;&#x43C;&#x44F; &#x434;&#x43B;&#x44F; &#x43F;&#x443;&#x441;&#x442;&#x44B;&#x445; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x432;&#x430;&#x43B;&#x43E;&#x432;.
+     * @param {boolean} is_line_sep - &#x424;&#x43B;&#x430;&#x433;, &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439;, &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x430; &#x43B;&#x438; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430; &#x431;&#x44B;&#x442;&#x44C; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x43D;&#x43E;&#x439;.
+     */
+    general_row(groupBlock, general_availability, name, bg = null, bold = true, empty_name = &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;, is_line_sep = true) {
+        // &#x418;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;
+        let selectedDate = this.start;
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x431;&#x435;&#x437; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x44F;
+        const line = this.addRow(groupBlock, name, bold, is_line_sep);
+
+        // &#x418;&#x442;&#x435;&#x440;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        for (const session of general_availability) {
+            // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B; &#x434;&#x430;&#x442;&#x44B; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x438; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;
+            const sessionStart = new Date(session.start_datetime_iso);
+            const sessionEnd = new Date(session.end_datetime_iso);
+
+            // &#x415;&#x441;&#x43B;&#x438; &#x434;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x43D;&#x435; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;,
+            // &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E; &quot;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;&quot;
+            if (sessionStart.getTime() != selectedDate.getTime()) {
+                this.addLineNull(line, selectedDate, sessionStart, empty_name);
+            }
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;
+            this.addLineData(line, sessionStart, sessionEnd, session.duration_in_sec, true, bg);
+
+            // &#x41E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x434;&#x43E; &#x434;&#x430;&#x442;&#x44B; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;
+            selectedDate = sessionEnd;
+        }
+
+        // &#x415;&#x441;&#x43B;&#x438; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43D;&#x435; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;,
+        // &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E; &quot;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x41A;&#x410;&quot;
+        if (selectedDate.getTime() !== this.end.getTime()) {
+            this.addLineNull(line, selectedDate, this.end, empty_name);
+        }
+    }
+}
+
+/**
+ * &#x41A;&#x43B;&#x430;&#x441;&#x441; SessionsDiagramGant &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x442; DiagramGant &#x438; &#x43E;&#x442;&#x432;&#x435;&#x447;&#x430;&#x435;&#x442; &#x437;&#x430; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x438; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;&#x445; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+ */
+export class SessionsDiagramGant extends DiagramGant {
+    /**
+     * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x430;.
+     *
+     * @param {Date} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Array} data - &#x41C;&#x430;&#x441;&#x441;&#x438;&#x432; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x43E;&#x432;. &#x41A;&#x430;&#x436;&#x434;&#x44B;&#x439; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430;:
+     *   - `{string} first_caller_name` - &#x418;&#x43C;&#x44F; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x433;&#x43E;.
+     *   - `{string} second_caller_name` - &#x418;&#x43C;&#x44F; &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x433;&#x43E;.
+     *   - `{string} first_sat_name` - &#x418;&#x43C;&#x44F; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;.
+     *   - `{string} second_sat_name` - &#x418;&#x43C;&#x44F; &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;.
+     *   - `{string} start_datetime_iso` - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; ISO.
+     *   - `{string} end_datetime_iso` - &#x414;&#x430;&#x442;&#x430; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; ISO.
+     *   - `{number} duration_in_sec` - &#x414;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x430;&#x445;.
+     * @param {Object} [selectedData={}] - &#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x441; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x43C;&#x438;. &#x421;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430;:
+     *   - `{string} first_caller_name` - &#x418;&#x43C;&#x44F; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x433;&#x43E;.
+     *   - `{string} second_caller_name` - &#x418;&#x43C;&#x44F; &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x433;&#x43E;.
+     *   - `{string} first_sat_name` - &#x418;&#x43C;&#x44F; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;.
+     *   - `{string} second_sat_name_` - &#x418;&#x43C;&#x44F; &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x443;&#x442;&#x43D;&#x438;&#x43A;&#x430;.
+     */
+    setData(start, end, data, selectedData = null) {
+        // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C; &#x440;&#x43E;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x434;&#x43B;&#x44F; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+        super.setData(start, end, data);
+
+        // &#x415;&#x441;&#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43F;&#x443;&#x441;&#x442;&#x44B;, &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431; &#x43E;&#x442;&#x441;&#x443;&#x442;&#x441;&#x442;&#x432;&#x438;&#x438; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;.
+        if (data.length == 0) {
+            this.setNoneData(&apos;&#x41D;&#x435;&#x442; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;.&apos;);
+            return;
+        }
+
+        let index = 1;
+
+        // &#x418;&#x442;&#x435;&#x440;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+        for (const session of data) {
+            let selected = false;
+
+            // &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x43C;, &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x430; &#x43B;&#x438; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x430;&#x44F; &#x441;&#x435;&#x441;&#x441;&#x438;&#x44F;.
+            if (selectedData) {
+                selected = session.first_caller_name === selectedData.first_caller_name &amp;&amp;
+                    session.second_caller_name === selectedData.second_caller_name &amp;&amp;
+                    session.first_sat_name === selectedData.first_sat_name &amp;&amp;
+                    session.second_sat_name === selectedData.second_sat_name;
+            }
+
+            // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x441; &#x438;&#x43C;&#x435;&#x43D;&#x430;&#x43C;&#x438; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x445;.
+            const groupBlock = this.addGroupBlock(`&#x421;&#x435;&#x430;&#x43D;&#x441; ${index}`);
+            index++;
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; &#x434;&#x435;&#x442;&#x430;&#x43B;&#x44F;&#x43C;&#x438; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            this.addRowGant(
+                groupBlock,
+                `${session.first_caller_name} - ${session.first_sat_name} &lt;br&gt; ${session.second_caller_name} - ${session.second_sat_name}`,
+                new Date(session.start_datetime_iso),
+                new Date(session.end_datetime_iso),
+                session.duration_in_sec,
+                selected, // &#x423;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;, &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x430; &#x43B;&#x438; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430;.
+                null,
+                false,
+                false,
+                &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;
+            );
+        }
+
+        // &#x41E;&#x442;&#x43C;&#x435;&#x447;&#x430;&#x435;&#x43C;, &#x447;&#x442;&#x43E; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x43B;&#x438;&#x441;&#x44C;.
+        this.isChange = true;
+    }
+}
+
+/**
+ * &#x41A;&#x43B;&#x430;&#x441;&#x441; GeneralDiagramGant &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x442; DiagramGant &#x438; &#x43E;&#x442;&#x432;&#x435;&#x447;&#x430;&#x435;&#x442; &#x437;&#x430; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x438; &#x43E;&#x442;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43E; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x430;&#x445; &#x441;&#x432;&#x44F;&#x437;&#x438; &#x432; &#x43E;&#x431;&#x449;&#x435;&#x43C; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; &#x434;&#x438;&#x430;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B; &#x413;&#x430;&#x43D;&#x442;&#x430;.
+ */
+export class GeneralDiagramGant extends DiagramGant {
+    /**
+     * &#x423;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x430;.
+     *
+     * @param {Date} start - &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Date} end - &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+     * @param {Array} data - &#x41C;&#x430;&#x441;&#x441;&#x438;&#x432; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x43E;&#x432;. &#x41A;&#x430;&#x436;&#x434;&#x44B;&#x439; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430;:
+     *   - `{string} start_datetime_iso` - &#x414;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; ISO.
+     *   - `{string} end_datetime_iso` - &#x414;&#x430;&#x442;&#x430; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x435; ISO.
+     *   - `{number} duration_in_sec` - &#x414;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x430;&#x445;.
+     */
+    setData(start, end, data, callers_data) {
+        // &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C; &#x440;&#x43E;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x434;&#x43B;&#x44F; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+        super.setData(start, end, data);
+
+        // &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x43C;, &#x435;&#x441;&#x442;&#x44C; &#x43B;&#x438; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435;, &#x435;&#x441;&#x43B;&#x438; &#x43D;&#x435;&#x442; - &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431; &#x43E;&#x442;&#x441;&#x443;&#x442;&#x441;&#x442;&#x432;&#x438;&#x438; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;.
+        if (data.length == 0) {
+            this.setNoneData(&apos;&#x41D;&#x435;&#x442; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432; &#x441;&#x432;&#x44F;&#x437;&#x438;.&apos;);
+            return;
+        }
+
+        // &#x418;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;.
+        let selectedDate = this.start;
+
+        // &#x41F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x432;&#x441;&#x435;&#x43C; &#x430;&#x431;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x430;&#x43C; &#x438; &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x43C; text &quot;A1+A2+A3...&quot;
+        const abonents_names = callers_data
+            .map(item =&gt; item.name) // &#x418;&#x437;&#x432;&#x43B;&#x435;&#x43A;&#x430;&#x435;&#x43C; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430; &quot;name&quot;
+            .join(&apos;+&apos;); // &#x41E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x44F;&#x435;&#x43C; &#x438;&#x445; &#x441; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &quot;+&quot;
+
+        // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x43B;&#x43E;&#x43A; &#x431;&#x435;&#x437; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x44F;.
+        const groupBlock = this.addGroupBlock(abonents_names);
+
+        // &#x441;&#x443;&#x43C;&#x43C;&#x430;&#x440;&#x43D;&#x430;&#x44F; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x432;&#x441;&#x435;&#x445; &#x441;&#x435;&#x430;&#x43D;&#x441;&#x43E;&#x432;.
+        let totalDuration = 0;
+
+        // &#x418;&#x442;&#x435;&#x440;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+        for (const session of data) {
+            // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B; &#x434;&#x430;&#x442;&#x44B; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x438; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            const sessionStart = new Date(session.start_datetime_iso);
+            const sessionEnd = new Date(session.end_datetime_iso);
+
+            // &#x423;&#x432;&#x435;&#x43B;&#x438;&#x447;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x443;&#x43C;&#x43C;&#x443; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;
+            totalDuration += session.duration_in_sec;
+
+            // &#x41E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x434;&#x43E; &#x434;&#x430;&#x442;&#x44B; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            selectedDate = sessionEnd;
+        }
+
+
+        // &#x421;&#x438;&#x43C;&#x432;&#x43E;&#x43B; &#x43F;&#x440;&#x43E;&#x431;&#x435;&#x43B;&#x430;
+        const space = &apos;&amp;nbsp;&apos;
+
+        // &#x443;&#x43C;&#x43D;&#x43E;&#x436;&#x430;&#x435;&#x43C; &#x447;&#x438;&#x441;&#x43B;&#x43E; &#x43F;&#x440;&#x43E;&#x431;&#x435;&#x43B;&#x43E;&#x432;
+        const spaces = space.repeat(46);
+
+        // &#x414;&#x435;&#x43B;&#x430;&#x435;&#x43C; caption
+        const totalDurationString = spaces + &apos;&#x41F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430; &#x441;&#x432;&#x44F;&#x437;&#x438; &apos; + dateUtils.secondsToHMS(totalDuration);
+
+        // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x441; caption
+        const line = this.addRow(groupBlock, totalDurationString);
+
+        // &#x41E;&#x431;&#x43D;&#x443;&#x43B;&#x44F;&#x435;&#x43C; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443;
+        selectedDate = this.start;
+
+        // &#x418;&#x442;&#x435;&#x440;&#x438;&#x440;&#x443;&#x435;&#x43C;&#x441;&#x44F; &#x43F;&#x43E; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x432; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445;.
+        for (const session of data) {
+            // &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B; &#x434;&#x430;&#x442;&#x44B; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x438; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            const sessionStart = new Date(session.start_datetime_iso);
+            const sessionEnd = new Date(session.end_datetime_iso);
+
+            // &#x415;&#x441;&#x43B;&#x438; &#x434;&#x430;&#x442;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438; &#x43D;&#x435; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;,
+            // &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E; &quot;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&quot;.
+            if (sessionStart.getTime() != selectedDate.getTime()) {
+                this.addLineNull(line, selectedDate, sessionStart, &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;);
+            }
+
+            // &#x414;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            this.addLineData(line, sessionStart, sessionEnd, session.duration_in_sec);
+
+            // &#x41E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x434;&#x430;&#x442;&#x443; &#x434;&#x43E; &#x434;&#x430;&#x442;&#x44B; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x439; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;.
+            selectedDate = sessionEnd;
+
+            // &#x423;&#x432;&#x435;&#x43B;&#x438;&#x447;&#x438;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x443;&#x43C;&#x43C;&#x443; &#x434;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x441;&#x435;&#x441;&#x441;&#x438;&#x438;
+            totalDuration += session.duration_in_sec;
+        }
+
+        // &#x415;&#x441;&#x43B;&#x438; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x434;&#x430;&#x442;&#x430; &#x43D;&#x435; &#x440;&#x430;&#x432;&#x43D;&#x430; &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;&#x439; &#x434;&#x430;&#x442;&#x435; &#x43F;&#x435;&#x440;&#x438;&#x43E;&#x434;&#x430;,
+        // &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x43C; &#x43B;&#x438;&#x43D;&#x438;&#x44E; &quot;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&quot;.
+        if (selectedDate.getTime() !== this.end.getTime()) {
+            this.addLineNull(line, selectedDate, this.end, &apos;&#x412;&#x43D;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;&apos;);
+        }
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
